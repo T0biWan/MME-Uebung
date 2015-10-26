@@ -1,0 +1,173 @@
+@charset "UTF-8";
+
+h1, h2, h3, p, ul, ol {
+	padding: 0;
+	margin: 0;
+}
+
+body{
+	background: url(pictures/hg2.jpg);
+	background-attachment: fixed;
+	background-size: cover;
+	margin: 0;
+    padding:  0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+}
+
+
+#wrapper{
+	background-color: rgb(29, 49, 76);
+	width: 960px;
+	margin: 0 auto;
+
+}
+
+
+header{
+	background-color: rgb(29, 49, 76);
+	padding: 0 0;
+	clear: both;
+}
+
+#logo {
+	width: 150px;
+	margin-left: 200px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	float: left;
+}
+
+#ueberschrift{
+    color: white;
+    float: right;
+    font-size: 30px;
+    margin-right: 250px;
+    margin-bottom: 20px;
+    margin-top: 80px;
+}
+
+
+nav{
+	background-color: #FFF;
+	height: 40px;
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	text-align: justify;
+	clear: both;
+}
+
+nav li {
+	list-style-type: none;
+	float: left;
+}
+nav li a{
+	width: 137px;
+	height: 35px;
+	padding-top: 5px;
+	display: block;
+	text-align: center;
+	font-size: 18px;
+	color: rgb(29, 49, 76);
+	text-decoration: none;
+}
+nav li a:hover{
+	background-color: rgb(97, 115, 150);
+	color: #FFF;
+}
+
+nav a.aktuelle-seite {
+    background-color: rgb(97, 115, 150);
+    color: #FFF;
+}
+
+
+
+#trainingstabelle{
+background-color: rgb(111, 111, 111);
+	width: 650px;
+	height: 300px;
+	border-collapse: collapse;
+	text-align: left;
+	color: #FFF;
+	float: left;
+	empty-cells: hide;
+}
+/*table, th, td {
+		width: 650px;
+		height: 300px;
+        text-align: left;
+        vertical-align: top;
+        padding: 2px 2px;
+        clear: both;
+    }*/
+#tabelle-suchfeld {
+        width: 85px;
+}
+
+
+#spalte{
+	background-color: rgb(222, 222, 222);
+	width: 220px;
+	height: 300px;
+	padding: 0 0;
+	margin: 0 0;
+	float: right;
+}
+#spalte p{
+	font-weight: bold;
+	font-size: 20px;
+	padding-top: 50px;
+	padding-bottom: 10px;
+	color: #FFF;
+}
+#spalte img{
+	padding-right: 20px;
+}
+
+
+h1{
+	color: white;
+	margin-left: 20px;
+	margin-top: 40px;
+	margin-bottom: 20px;
+}
+
+h2{
+
+}
+
+footer{
+	background-color: #FFF;
+	height: 40px;
+	width: 310px;
+	clear: both;
+	padding-left: 325px;
+	padding-right: 325px;
+	position: fixed;
+	bottom: 0; 
+}
+footer li {
+	list-style-type: none;
+	float: left;
+	width: 33%;
+	text-align: center;
+	font-size: 18px;
+	color: rgb(29, 49, 76);
+	padding-top: 5px;
+}
+footer li a{
+	color: rgb(29, 49, 76);
+	text-decoration: none;
+}
+footer li a:hover{
+	background-color: rgb(97, 115, 150);
+	height: 40px;
+	color: #FFF;
+	text-decoration: none;
+}
+
+table.hinzufuegenformular {
+    color: #FFF;
+}
