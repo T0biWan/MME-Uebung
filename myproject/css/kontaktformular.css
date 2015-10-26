@@ -8,11 +8,20 @@
 
 @media screen {
 
-
+    
     div.kontaktformular {
         color: white;
     }
     
+    div.kontaktformular > h2 {
+        padding: 1em;
+        padding-left: 2.3em;
+    }
+    
+    div.kontaktformular > p {
+        padding-left: 3.5em;
+    }
+        
     form.kontaktformular {
         /*background-color: #eeeeee;*/
         background-color:  rgb(29, 49, 76);
