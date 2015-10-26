@@ -1,16 +1,14 @@
 /*===================================================================================================
-    Zentrale CSS-Datei
-    Importiert die anderen CSS-Module
+    CSS-Datei für die Navigationsleiste
 
-    Datei: import.css
+    Datei: navigation.css
     Autor: Tobias, Leon
     Datum: 26.10.2015
 ===================================================================================================*/
 
-    @import url(styles.css);
-    @import url(table-training.css);
-    @import url(kontaktformular.css);
-    @import url(navigation.css);
+@media screen {
+
+} /*Ende qmedia*/
 
 /*===================================================================================================
 
