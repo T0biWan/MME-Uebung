@@ -1,14 +1,17 @@
 /*===================================================================================================
-    Zentrale CSS-Datei
+    CSS-Datei für die Tabelle mit den Trainingszeiten
 
-    Datei: import.css
+    Datei: table-training.css
     Autor: Tobias, Leon
     Datum: 26.10.2015
 ===================================================================================================*/
 
-    @import url(styles.css);
-    @import url(table.css);
-    @import url(kontakt.css);
+@charset "UTF-8";
+
+table{
+	width: 600px;
+	padding-left: 20px;
+}
 
 /*===================================================================================================
 
