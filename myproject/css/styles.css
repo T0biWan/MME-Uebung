@@ -151,16 +151,6 @@ nav a.aktuelle-seite {
 #termineHead{
 	padding-top: 280px;
 }
-#headerbildKontakt{
-	background: url(pictures/kontakt.jpg);
-	background-attachment: fixed;
-	background-size: cover;
-	height: 350px;
-	margin-top: 50px;
-}
-#kontaktHead{
-	padding-top: 280px;
-}
 
 
 .mapsKarte{
@@ -168,28 +158,28 @@ nav a.aktuelle-seite {
 	height: 360px;
 }
 
-#spalte{
-	width: 200px;
-	height: 300px;
-	margin-top: 40px;
-	margin-right: 20px;
-	float: right;
-}
-#spalte p{
-	font-weight: bold;
-	font-size: 20px;
-	padding-bottom: 20px;
-	color: #FFF;
-}
-
 /*----------------------Seite: Termine-------------------------*/
-
 #wettkaempfe{
 	padding-top: 20px;
 	padding-bottom: 20px;
 	padding-left: 20px;
 	text-align: left;
 	text-shadow: 0px 0px 0px; 
+}
+ .bearbeiten:hover {
+ 		color: #fff;
+        cursor: pointer;
+        background: url(css/pictures/Lupe.png) ;
+}
+.loeschen:hover{
+	color: #fff;
+	cursor: pointer;
+        background: url(css/pictures/Lupe.png) ;
+}
+.suchen:hover{
+	color: #fff;
+	cursor: pointer;
+        background: url(css/pictures/Lupe.png) ;
 }
 
 footer{
