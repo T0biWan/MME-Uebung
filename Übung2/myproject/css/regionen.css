@@ -1,18 +1,19 @@
 /*====================================================================================================
-    Merge
-    Zusammenführung der Style-Module
-    Dient der Dezentralisierung
+    Regionen
+    Styles für die Regionen Neuseelands
     
-    Datei: merge.css
-    Datum: 02.11.2015
+    Datei: regionen.css
+    Datum: 08.11.2015
     Autor: Tobias & Leon
 ====================================================================================================*/	
+
+@media screen {
     
-/*====================================================================================================
-    Importe
-====================================================================================================*/
+    ul.highlights {
+        list-style-type: none /* entfernt die Aufzählungszeichen der Listenelemente */
+    }
     
-    @import url(regionen.css);
+} /* Ende @media - nicht löschen */
 
 /*====================================================================================================
 
