@@ -325,22 +325,22 @@ function paragraphAendern (button) {
         
         case "northlandInfoButton":
             document.getElementById("northlandTextart").innerHTML = "Kurze Beschreibung:";
-            document.getElementById("northlandParagraph").innerHTML = "";
+            document.getElementById("northlandParagraph").innerHTML = "Östlich von Auckland wagt sie sich kühn in den Pazifikhinaus. Ein dramatisch in die Höhe ragender Bergrücken teilt die Halbinsel in zwei sehr ungleiche Hälften. An der Ostküste warten weißsandige Strände. Die kitschigen Goldgräberstädte im Westen bleiben vom schlimmsten Touristenandrang verschont, da die dortigen Feuchtgebiete und steinigen Buchten für die Massen eher unattraktiv sind. Lange diente dieser Küstenabschnitt Hippies als Refugium, inzwischen prägen Biobauernhöfe und Rückzugsorte für Bhuddisten das Bild. Im Zentrum der Halbinsel durchziehen Wanderpfade die Berge. Weiter im Süden, wo sich einst die sumpfigen Hauraki Plains mit einer großen Vogelvielfalt erstreckten, haben sich ökologische Nischen erhalten.Trotz der Nähe zu Auckland ist man in der Region schnell und einfach in herrlicher Abgeschiedenheit. Einige der abgelegenen  Gemeinden erreicht man immer noch nur über Schotterpisten und die Aura rauer Eigenwilligkeit verfolgt einen auf Schritt und Tritt.";
         break;
             
         case "northlandKlimaButton":
             document.getElementById("northlandTextart").innerHTML = "Klima:";
-            document.getElementById("northlandParagraph").innerHTML = "";
+            document.getElementById("northlandParagraph").innerHTML = "Der 'winterlose Norden hat durchschnittlich sieben Regentage pro Monat im Sommer und 16 im Winter. Die Temperatur ist meist ein oder zwei Grad höher als in Auckland.";
         break;
             
         case "northlandTodoButton":
             document.getElementById("northlandTextart").innerHTML = "Aktivitäten:";
-            document.getElementById("northlandParagraph").innerHTML = "";
+            document.getElementById("northlandParagraph").innerHTML = "Cape Reinga - Am nördlichsten Punkt Neuseelands das Ende der Welt bestaunen und beobachten wie zwei Ozeane aufeinandertreffen.<br>Ninety Miles Beach - 90 Kilometer befahrbarer Sandstrand neben schroffen Wellen<br>Waipoua Kauri Forest - Den uralten und stillen Giganten eine Aufwartung machen.<br>Abbey Caves - In einem verwunschenen Wald voller bizarrer Felsen tut sich die Erde auf und ermöglicht es den Mutigen über fünf Höhlensysteme zu erkunden.<br>Matapouri - Ein karibisch anmutender Sandstrand an einer Sichelförmigen Bucht. Durch einen kleinen Dschungel gelangt man zum Mermaids Pool.<br>Dukes Nose - Eine waghalsige Wanderung die einen breiten Fluss auf seinem Weg zum Meer begleitet und mit dem erklimmen einer steilen Steinwand endet.";
         break;
         
         case "northlandEssenButton":
             document.getElementById("northlandTextart").innerHTML = "Essen:";
-            document.getElementById("northlandParagraph").innerHTML = "";
+            document.getElementById("northlandParagraph").innerHTML = "	Beach House - Das beste Lokal Northlands serviert herzhafte Gerichte in einem von Pongastämmen umgebenen Hof.<br>Bob - 'Hi Bob, netter Laden. Wie würdest du dich beschreiben? Als Deli? Als Cafe? Und all die ausgefallenen Zutaten für die Standardgerichte wie Kransky-Würstchen zum Frühstück! Gut gemacht, Bob.'<br>Tuk Tuk - Thailändische Küche in traditioneller Atmosphäre<br>Gannets Restaurant - Tolles kleines Restaurant mit viel gelobten Meeresfrüchten";
         break;
         
             

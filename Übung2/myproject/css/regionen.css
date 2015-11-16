@@ -17,7 +17,6 @@
     
     div.regionen img {
         width: 35%;
-        float: left;
         padding-left: 2%;
     }
         /*position: fixed;*/
@@ -29,7 +28,6 @@
     
     div.regionen p {
         width: 60%;
-        float: right;
         padding-right: 2%;
         padding-left: 1%;
     }
