@@ -26,10 +26,12 @@ function init() {
     }
 
 }
-window.onload = init;
 
-function paragraphAendern (b) {
-    switch (b) {
+//window.onload = init;
+window.addEventListener("load", init, false);
+
+function paragraphAendern (button) {
+    switch (button) {
         case "aucklandInfoButton":
             document.getElementById("aucklandParagraph").innerHTML = "Paris ist die Stadt der Liebe aber Auckland die Stadt der liebenden. Das zumindest bedeutet ihr Maori-Name Tamaki Makaurau. Zwei Häfen umrahmen eine Landenge mit Vulkankegeln und fruchtbarem Ackerland. An jedem der vielen Aussichtspunkte wird man verblüfft feststellen, wie die Tasmansee und der Pazifik kurz davor sind sich zu berühren und eine neue Insel zu formen. So kommt es, dass immer Wasser in der Nähe ist. Die 135.000 Schiffchen, die in den Jachthäfen liegen, haben der Stadt ihren beständigsten Spitznamen verliehen: Stadt der Segel. Dichte Regenwälder Thermalquellen, menschenleere Strände, Weingüter und Naturschutzgebiete liegen nie mehr als eine Autostunde von den Hochhäusern der Innenstadt entfernt.";
         break;
