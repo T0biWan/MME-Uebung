@@ -8,10 +8,14 @@
 ====================================================================================================*/	
 
 @media screen {
-    
-    ul.highlights {
-        list-style-type: none /* entfernt die Aufzählungszeichen der Listenelemente */
+    div.regionen img {
+        width: 40%;
     }
+    
+    div.regionen p {
+        width: 60%;
+    }
+    
     
 } /* Ende @media - nicht löschen */
 
