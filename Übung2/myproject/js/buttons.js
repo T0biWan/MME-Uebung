@@ -347,22 +347,22 @@ function paragraphAendern (button) {
         
         case "coromandelPeninsulaInfoButton":
             document.getElementById("coromandelPeninsulaTextart").innerHTML = "Kurze Beschreibung:";
-            document.getElementById("coromandelPeninsulaParagraph").innerHTML = "";
+            document.getElementById("coromandelPeninsulaParagraph").innerHTML = "Östlich von Auckland wagt sie sich kühn in den Pazifikhinaus. Ein dramatisch in die Höhe ragender Bergrücken teilt die Halbinsel in zwei sehr ungleiche Hälften. An der Ostküste warten weißsandige Strände. Die kitschigen Goldgräberstädte im Westen bleiben vom schlimmsten Touristenandrang verschont, da die dortigen Feuchtgebiete und steinigen Buchten für die Massen eher unattraktiv sind. Lange diente dieser Küstenabschnitt Hippies als Refugium, inzwischen prägen Biobauernhöfe und Rückzugsorte für Bhuddisten das Bild. Im Zentrum der Halbinsel durchziehen Wanderpfade die Berge. Weiter im Süden, wo sich einst die sumpfigen Hauraki Plains mit einer großen Vogelvielfalt erstreckten, haben sich ökologische Nischen erhalten. Trotz der Nähe zu Auckland ist man in der Region schnell und einfach in herrlicher Abgeschiedenheit. Einige der abgelegenen  Gemeinden erreicht man immer noch nur über Schotterpisten und die Aura rauer Eigenwilligkeit verfolgt einen auf Schritt und Tritt.";
         break;
             
         case "coromandelPeninsulaKlimaButton":
             document.getElementById("coromandelPeninsulaTextart").innerHTML = "Klima:";
-            document.getElementById("coromandelPeninsulaParagraph").innerHTML = "";
+            document.getElementById("coromandelPeninsulaParagraph").innerHTML = "Aufgrund ihrer Gebirge fällt in der Region mehr Niederschlag als an der übrigen Ostküste. Jährlich 3000 bis 4500 mm.";
         break;
             
         case "coromandelPeninsulaTodoButton":
             document.getElementById("coromandelPeninsulaTextart").innerHTML = "Aktivitäten:";
-            document.getElementById("coromandelPeninsulaParagraph").innerHTML = "";
+            document.getElementById("coromandelPeninsulaParagraph").innerHTML = "Far North Coromandel - Unter dem purpurroten Dach alter Pohutukawa-Bäume auf abgelegenen Schotterpisten fahren.<br>Hahei - Mit dem Kajak versteckte Inseln, Höhlen und Buchten erforschen.<br>Hot Water Beach - Am Strand seinen eigenen Thermalwasserpool graben und das warme Wasser genießen das aus dem Boden quillt.<br>Karangahake Gorge - In die geheimnisvollen Tiefen des dichten Waldes vordringen.";
         break;
         
         case "coromandelPeninsulaEssenButton":
             document.getElementById("coromandelPeninsulaTextart").innerHTML = "Essen:";
-            document.getElementById("coromandelPeninsulaParagraph").innerHTML = "";
+            document.getElementById("coromandelPeninsulaParagraph").innerHTML = "Matatoki Farm Cheese - Käse aus der Region<br>Rocco - Spanisches und neuseeländisches Essen in einer restaurierten Villa aus Kauriholz.<br>Food for thought - Panini, Kuchen, Kaffe oder doch Pies?";
         break;
         
             
