@@ -670,10 +670,11 @@ function paragraphAendern (button) {
 }
 
 function checkEingaben () {
-    checkEingabe(nachname);
+    checkEingabe(nachname, name);
+    checkEingabe(plz, plz);
 }
 
-function checkEingabe (inputName) {
+function checkEingabe (inputName, inputTyp) {
     //Variablen deklarieren
     //Input zeigt auf die Texteingabe
     //Output zeigt auf das Warnlabel
@@ -725,7 +726,7 @@ function checkEingabe (inputName) {
     
     //Prüfung und Reaktion auf leere Eingabe
     if (eingabeIstLeer(input)) document.getElementById(output).innerHTML = "<-- Bitte ausfüllen";
-    else checkFormat ();
+    else checkFormat (input, output, inputTyp);
 }
 
 
@@ -740,9 +741,36 @@ function eingabeIstLeer (inputName) {
     return inputName == "";
 }
 
-function checkFormat () {
-    alert("checked");
-    //Wenn emial nicht leer, hat email ein @ und einen punkt?
+function checkFormat (input, output, inputTyp) {
+    //Variable deklarieren
+    //Abhängig von inputTyp wird sie initialisert.
+    //Im Anschluss wird verglichen.
+    var regEx;
+    switch (inputTyp) {
+        case name:
+            //Kann mit einem großenbuchstaben beginnen
+            //Endet mit einen kleinen Buchstaben
+            //Auf Länge testen klappt nicht...dadurch ist folgendes möglich "AaTa"...
+            //Dadurch sind doppelnamen nicht möglich...
+            
+            //regEx = /^(\p{L}\p{Ll}{0,20}$)|(\p{L}\p{Ll}{0,20}(-|_| - | _ | )\p{L}\p{Ll}{0,20}$)/;
+            //regEx = /^\p{L}\p{Ll}{0,20}$/;
+            
+            //Da RegEx hier nicht funktioniert nun dieser lächerliche Mist.
+            //Kontrolliert das keine Zahl eingetragen wird.
+            //Das nur ein großer Buchstabe eingetragen wird, muss aber nicht
+            //Keine Zahl eingetragen wird
+            regEx = /^[A-Z]?[a-z]$/;
+            break;
+        
+        case plz:
+            regEx = /[5]/;
+            break;
+    }
+    if (!regEx.test(input)) document.getElementById(output).innerHTML = "<-- Falsches Format";
+    
+    //Wenn alle Tests positiv verlaufen sind wird das Warn-label geleert.
+    else document.getElementById(output).innerHTML = "";
 }
 
 //=================================================================================================
