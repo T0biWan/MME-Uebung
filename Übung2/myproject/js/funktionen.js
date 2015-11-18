@@ -9,295 +9,311 @@
 //Durch dieses Konstrukt wird sichergestellt das die Funktionen erst verknüpft werden,
 //wenn die Seite geladen ist.
 function init() {
-    document.getElementById("aucklandInfoButton").onclick = function () {
-        paragraphAendern("aucklandInfoButton");
-    }
-    
-    document.getElementById("aucklandKlimaButton").onclick = function () {
-        paragraphAendern("aucklandKlimaButton");
-    }
-    
-    document.getElementById("aucklandTodoButton").onclick = function () {
-       paragraphAendern("aucklandTodoButton");
-    }
-    
-    document.getElementById("aucklandEssenButton").onclick = function () {
-        paragraphAendern("aucklandEssenButton");
-    }
-    
-    
-    
-    document.getElementById("northlandInfoButton").onclick = function () {
-        paragraphAendern("northlandInfoButton");
-    }
-    
-    document.getElementById("northlandKlimaButton").onclick = function () {
-        paragraphAendern("northlandKlimaButton");
-    }
-    
-    document.getElementById("northlandTodoButton").onclick = function () {
-       paragraphAendern("northlandTodoButton");
-    }
-    
-    document.getElementById("northlandEssenButton").onclick = function () {
-        paragraphAendern("northlandEssenButton");
-    }
-    
-    
-    
-    document.getElementById("coromandelPeninsulaInfoButton").onclick = function () {
-        paragraphAendern("coromandelPeninsulaInfoButton");
-    }
-    
-    document.getElementById("coromandelPeninsulaKlimaButton").onclick = function () {
-        paragraphAendern("coromandelPeninsulaKlimaButton");
-    }
-    
-    document.getElementById("coromandelPeninsulaTodoButton").onclick = function () {
-       paragraphAendern("coromandelPeninsulaTodoButton");
-    }
-    
-    document.getElementById("coromandelPeninsulaEssenButton").onclick = function () {
-        paragraphAendern("coromandelPeninsulaEssenButton");
-    }
-    
-    
-    
-    document.getElementById("waikato&KingCountryInfoButton").onclick = function () {
-        paragraphAendern("waikato&KingCountryInfoButton");
-    }
-    
-    document.getElementById("waikato&KingCountryKlimaButton").onclick = function () {
-        paragraphAendern("waikato&KingCountryKlimaButton");
-    }
-    
-    document.getElementById("waikato&KingCountryTodoButton").onclick = function () {
-       paragraphAendern("waikato&KingCountryTodoButton");
-    }
-    
-    document.getElementById("waikato&KingCountryEssenButton").onclick = function () {
-        paragraphAendern("waikato&KingCountryEssenButton");
-    }
-    
-    
-    
-    document.getElementById("bayOfPlentyInfoButton").onclick = function () {
-        paragraphAendern("bayOfPlentyInfoButton");
-    }
-    
-    document.getElementById("bayOfPlentyKlimaButton").onclick = function () {
-        paragraphAendern("bayOfPlentyKlimaButton");
-    }
-    
-    document.getElementById("bayOfPlentyTodoButton").onclick = function () {
-       paragraphAendern("bayOfPlentyTodoButton");
-    }
-    
-    document.getElementById("bayOfPlentyEssenButton").onclick = function () {
-        paragraphAendern("bayOfPlentyEssenButton");
-    }
-    
-    
-    
-    document.getElementById("eastCoastInfoButton").onclick = function () {
-        paragraphAendern("eastCoastInfoButton");
-    }
-    
-    document.getElementById("eastCoastKlimaButton").onclick = function () {
-        paragraphAendern("eastCoastKlimaButton");
-    }
-    
-    document.getElementById("eastCoastTodoButton").onclick = function () {
-       paragraphAendern("eastCoastTodoButton");
-    }
-    
-    document.getElementById("eastCoastEssenButton").onclick = function () {
-        paragraphAendern("eastCoastEssenButton");
-    }
-    
-    
-    
-    document.getElementById("zentraleHochebeneInfoButton").onclick = function () {
-        paragraphAendern("zentraleHochebeneInfoButton");
-    }
-    
-    document.getElementById("zentraleHochebeneKlimaButton").onclick = function () {
-        paragraphAendern("zentraleHochebeneKlimaButton");
-    }
-    
-    document.getElementById("zentraleHochebeneTodoButton").onclick = function () {
-       paragraphAendern("zentraleHochebeneTodoButton");
-    }
-    
-    document.getElementById("zentraleHochebeneEssenButton").onclick = function () {
-        paragraphAendern("zentraleHochebeneEssenButton");
-    }
-    
-    
-    
-    document.getElementById("taranakiInfoButton").onclick = function () {
-        paragraphAendern("taranakiInfoButton");
-    }
-    
-    document.getElementById("taranakiKlimaButton").onclick = function () {
-        paragraphAendern("taranakiKlimaButton");
-    }
-    
-    document.getElementById("taranakiTodoButton").onclick = function () {
-       paragraphAendern("taranakiTodoButton");
-    }
-    
-    document.getElementById("taranakiEssenButton").onclick = function () {
-        paragraphAendern("taranakiEssenButton");
-    }
-    
-    
-    
-    document.getElementById("whanganui&PalmerstonNorthInfoButton").onclick = function () {
-        paragraphAendern("whanganui&PalmerstonNorthInfoButton");
-    }
-    
-    document.getElementById("whanganui&PalmerstonNorthKlimaButton").onclick = function () {
-        paragraphAendern("whanganui&PalmerstonNorthKlimaButton");
-    }
-    
-    document.getElementById("whanganui&PalmerstonNorthTodoButton").onclick = function () {
-       paragraphAendern("whanganui&PalmerstonNorthTodoButton");
-    }
-    
-    document.getElementById("whanganui&PalmerstonNorthEssenButton").onclick = function () {
-        paragraphAendern("whanganui&PalmerstonNorthEssenButton");
-    }
-    
-    
-    
-    document.getElementById("wellingtonInfoButton").onclick = function () {
-        paragraphAendern("wellingtonInfoButton");
-    }
-    
-    document.getElementById("wellingtonKlimaButton").onclick = function () {
-        paragraphAendern("wellingtonKlimaButton");
-    }
-    
-    document.getElementById("wellingtonTodoButton").onclick = function () {
-       paragraphAendern("wellingtonTodoButton");
-    }
-    
-    document.getElementById("wellingtonEssenButton").onclick = function () {
-        paragraphAendern("wellingtonEssenButton");
-    }
-    
-    
-    
-    document.getElementById("marlborough&NelsonInfoButton").onclick = function () {
-        paragraphAendern("marlborough&NelsonInfoButton");
-    }
-    
-    document.getElementById("marlborough&NelsonKlimaButton").onclick = function () {
-        paragraphAendern("marlborough&NelsonKlimaButton");
-    }
-    
-    document.getElementById("marlborough&NelsonTodoButton").onclick = function () {
-       paragraphAendern("marlborough&NelsonTodoButton");
-    }
-    
-    document.getElementById("marlborough&NelsonEssenButton").onclick = function () {
-        paragraphAendern("marlborough&NelsonEssenButton");
-    }
-    
-    
-    
-    document.getElementById("christchurch&CanterburyInfoButton").onclick = function () {
-        paragraphAendern("christchurch&CanterburyInfoButton");
-    }
-    
-    document.getElementById("christchurch&CanterburyKlimaButton").onclick = function () {
-        paragraphAendern("christchurch&CanterburyKlimaButton");
-    }
-    
-    document.getElementById("christchurch&CanterburyTodoButton").onclick = function () {
-       paragraphAendern("christchurch&CanterburyTodoButton");
-    }
-    
-    document.getElementById("christchurch&CanterburyEssenButton").onclick = function () {
-        paragraphAendern("christchurch&CanterburyEssenButton");
-    }
-    
-    
-    
-    document.getElementById("otagoInfoButton").onclick = function () {
-        paragraphAendern("otagoInfoButton");
-    }
-    
-    document.getElementById("otagoKlimaButton").onclick = function () {
-        paragraphAendern("otagoKlimaButton");
-    }
-    
-    document.getElementById("otagoTodoButton").onclick = function () {
-       paragraphAendern("otagoTodoButton");
-    }
-    
-    document.getElementById("otagoEssenButton").onclick = function () {
-        paragraphAendern("otagoEssenButton");
-    }
-    
-    
-    
-    document.getElementById("queenstownInfoButton").onclick = function () {
-        paragraphAendern("queenstownInfoButton");
-    }
-    
-    document.getElementById("queenstownKlimaButton").onclick = function () {
-        paragraphAendern("queenstownKlimaButton");
-    }
-    
-    document.getElementById("queenstownTodoButton").onclick = function () {
-       paragraphAendern("queenstownTodoButton");
-    }
-    
-    document.getElementById("queenstownEssenButton").onclick = function () {
-        paragraphAendern("queenstownEssenButton");
-    }
-    
-    
-    
-        document.getElementById("fjordland&SouthlandInfoButton").onclick = function () {
-        paragraphAendern("fjordland&SouthlandInfoButton");
-    }
-    
-    document.getElementById("fjordland&SouthlandKlimaButton").onclick = function () {
-        paragraphAendern("fjordland&SouthlandKlimaButton");
-    }
-    
-    document.getElementById("fjordland&SouthlandTodoButton").onclick = function () {
-       paragraphAendern("fjordland&SouthlandTodoButton");
-    }
-    
-    document.getElementById("fjordland&SouthlandEssenButton").onclick = function () {
-        paragraphAendern("fjordland&SouthlandEssenButton");
-    }
-    
-    
-    
-    document.getElementById("westCoastInfoButton").onclick = function () {
-        paragraphAendern("westCoastInfoButton");
-    }
-    
-    document.getElementById("westCoastKlimaButton").onclick = function () {
-        paragraphAendern("westCoastKlimaButton");
-    }
-    
-    document.getElementById("westCoastTodoButton").onclick = function () {
-       paragraphAendern("westCoastTodoButton");
-    }
-    
-    document.getElementById("westCoastEssenButton").onclick = function () {
-        paragraphAendern("westCoastEssenButton");
-    }
-
+    // Buttons zum ändern der Texte für die Regionen
+//    document.getElementById("aucklandInfoButton").onclick = function () {
+//        paragraphAendern("aucklandInfoButton");
+//    }
+//    
+//    document.getElementById("aucklandKlimaButton").onclick = function () {
+//        paragraphAendern("aucklandKlimaButton");
+//    }
+//    
+//    document.getElementById("aucklandTodoButton").onclick = function () {
+//       paragraphAendern("aucklandTodoButton");
+//    }
+//    
+//    document.getElementById("aucklandEssenButton").onclick = function () {
+//        paragraphAendern("aucklandEssenButton");
+//    }
+//    
+//    
+//    
+//    document.getElementById("northlandInfoButton").onclick = function () {
+//        paragraphAendern("northlandInfoButton");
+//    }
+//    
+//    document.getElementById("northlandKlimaButton").onclick = function () {
+//        paragraphAendern("northlandKlimaButton");
+//    }
+//    
+//    document.getElementById("northlandTodoButton").onclick = function () {
+//       paragraphAendern("northlandTodoButton");
+//    }
+//    
+//    document.getElementById("northlandEssenButton").onclick = function () {
+//        paragraphAendern("northlandEssenButton");
+//    }
+//    
+//    
+//    
+//    document.getElementById("coromandelPeninsulaInfoButton").onclick = function () {
+//        paragraphAendern("coromandelPeninsulaInfoButton");
+//    }
+//    
+//    document.getElementById("coromandelPeninsulaKlimaButton").onclick = function () {
+//        paragraphAendern("coromandelPeninsulaKlimaButton");
+//    }
+//    
+//    document.getElementById("coromandelPeninsulaTodoButton").onclick = function () {
+//       paragraphAendern("coromandelPeninsulaTodoButton");
+//    }
+//    
+//    document.getElementById("coromandelPeninsulaEssenButton").onclick = function () {
+//        paragraphAendern("coromandelPeninsulaEssenButton");
+//    }
+//    
+//    
+//    
+//    document.getElementById("waikato&KingCountryInfoButton").onclick = function () {
+//        paragraphAendern("waikato&KingCountryInfoButton");
+//    }
+//    
+//    document.getElementById("waikato&KingCountryKlimaButton").onclick = function () {
+//        paragraphAendern("waikato&KingCountryKlimaButton");
+//    }
+//    
+//    document.getElementById("waikato&KingCountryTodoButton").onclick = function () {
+//       paragraphAendern("waikato&KingCountryTodoButton");
+//    }
+//    
+//    document.getElementById("waikato&KingCountryEssenButton").onclick = function () {
+//        paragraphAendern("waikato&KingCountryEssenButton");
+//    }
+//    
+//    
+//    
+//    document.getElementById("bayOfPlentyInfoButton").onclick = function () {
+//        paragraphAendern("bayOfPlentyInfoButton");
+//    }
+//    
+//    document.getElementById("bayOfPlentyKlimaButton").onclick = function () {
+//        paragraphAendern("bayOfPlentyKlimaButton");
+//    }
+//    
+//    document.getElementById("bayOfPlentyTodoButton").onclick = function () {
+//       paragraphAendern("bayOfPlentyTodoButton");
+//    }
+//    
+//    document.getElementById("bayOfPlentyEssenButton").onclick = function () {
+//        paragraphAendern("bayOfPlentyEssenButton");
+//    }
+//    
+//    
+//    
+//    document.getElementById("eastCoastInfoButton").onclick = function () {
+//        paragraphAendern("eastCoastInfoButton");
+//    }
+//    
+//    document.getElementById("eastCoastKlimaButton").onclick = function () {
+//        paragraphAendern("eastCoastKlimaButton");
+//    }
+//    
+//    document.getElementById("eastCoastTodoButton").onclick = function () {
+//       paragraphAendern("eastCoastTodoButton");
+//    }
+//    
+//    document.getElementById("eastCoastEssenButton").onclick = function () {
+//        paragraphAendern("eastCoastEssenButton");
+//    }
+//    
+//    
+//    
+//    document.getElementById("zentraleHochebeneInfoButton").onclick = function () {
+//        paragraphAendern("zentraleHochebeneInfoButton");
+//    }
+//    
+//    document.getElementById("zentraleHochebeneKlimaButton").onclick = function () {
+//        paragraphAendern("zentraleHochebeneKlimaButton");
+//    }
+//    
+//    document.getElementById("zentraleHochebeneTodoButton").onclick = function () {
+//       paragraphAendern("zentraleHochebeneTodoButton");
+//    }
+//    
+//    document.getElementById("zentraleHochebeneEssenButton").onclick = function () {
+//        paragraphAendern("zentraleHochebeneEssenButton");
+//    }
+//    
+//    
+//    
+//    document.getElementById("taranakiInfoButton").onclick = function () {
+//        paragraphAendern("taranakiInfoButton");
+//    }
+//    
+//    document.getElementById("taranakiKlimaButton").onclick = function () {
+//        paragraphAendern("taranakiKlimaButton");
+//    }
+//    
+//    document.getElementById("taranakiTodoButton").onclick = function () {
+//       paragraphAendern("taranakiTodoButton");
+//    }
+//    
+//    document.getElementById("taranakiEssenButton").onclick = function () {
+//        paragraphAendern("taranakiEssenButton");
+//    }
+//    
+//    
+//    
+//    document.getElementById("whanganui&PalmerstonNorthInfoButton").onclick = function () {
+//        paragraphAendern("whanganui&PalmerstonNorthInfoButton");
+//    }
+//    
+//    document.getElementById("whanganui&PalmerstonNorthKlimaButton").onclick = function () {
+//        paragraphAendern("whanganui&PalmerstonNorthKlimaButton");
+//    }
+//    
+//    document.getElementById("whanganui&PalmerstonNorthTodoButton").onclick = function () {
+//       paragraphAendern("whanganui&PalmerstonNorthTodoButton");
+//    }
+//    
+//    document.getElementById("whanganui&PalmerstonNorthEssenButton").onclick = function () {
+//        paragraphAendern("whanganui&PalmerstonNorthEssenButton");
+//    }
+//    
+//    
+//    
+//    document.getElementById("wellingtonInfoButton").onclick = function () {
+//        paragraphAendern("wellingtonInfoButton");
+//    }
+//    
+//    document.getElementById("wellingtonKlimaButton").onclick = function () {
+//        paragraphAendern("wellingtonKlimaButton");
+//    }
+//    
+//    document.getElementById("wellingtonTodoButton").onclick = function () {
+//       paragraphAendern("wellingtonTodoButton");
+//    }
+//    
+//    document.getElementById("wellingtonEssenButton").onclick = function () {
+//        paragraphAendern("wellingtonEssenButton");
+//    }
+//    
+//    
+//    
+//    document.getElementById("marlborough&NelsonInfoButton").onclick = function () {
+//        paragraphAendern("marlborough&NelsonInfoButton");
+//    }
+//    
+//    document.getElementById("marlborough&NelsonKlimaButton").onclick = function () {
+//        paragraphAendern("marlborough&NelsonKlimaButton");
+//    }
+//    
+//    document.getElementById("marlborough&NelsonTodoButton").onclick = function () {
+//       paragraphAendern("marlborough&NelsonTodoButton");
+//    }
+//    
+//    document.getElementById("marlborough&NelsonEssenButton").onclick = function () {
+//        paragraphAendern("marlborough&NelsonEssenButton");
+//    }
+//    
+//    
+//    
+//    document.getElementById("christchurch&CanterburyInfoButton").onclick = function () {
+//        paragraphAendern("christchurch&CanterburyInfoButton");
+//    }
+//    
+//    document.getElementById("christchurch&CanterburyKlimaButton").onclick = function () {
+//        paragraphAendern("christchurch&CanterburyKlimaButton");
+//    }
+//    
+//    document.getElementById("christchurch&CanterburyTodoButton").onclick = function () {
+//       paragraphAendern("christchurch&CanterburyTodoButton");
+//    }
+//    
+//    document.getElementById("christchurch&CanterburyEssenButton").onclick = function () {
+//        paragraphAendern("christchurch&CanterburyEssenButton");
+//    }
+//    
+//    
+//    
+//    document.getElementById("otagoInfoButton").onclick = function () {
+//        paragraphAendern("otagoInfoButton");
+//    }
+//    
+//    document.getElementById("otagoKlimaButton").onclick = function () {
+//        paragraphAendern("otagoKlimaButton");
+//    }
+//    
+//    document.getElementById("otagoTodoButton").onclick = function () {
+//       paragraphAendern("otagoTodoButton");
+//    }
+//    
+//    document.getElementById("otagoEssenButton").onclick = function () {
+//        paragraphAendern("otagoEssenButton");
+//    }
+//    
+//    
+//    
+//    document.getElementById("queenstownInfoButton").onclick = function () {
+//        paragraphAendern("queenstownInfoButton");
+//    }
+//    
+//    document.getElementById("queenstownKlimaButton").onclick = function () {
+//        paragraphAendern("queenstownKlimaButton");
+//    }
+//    
+//    document.getElementById("queenstownTodoButton").onclick = function () {
+//       paragraphAendern("queenstownTodoButton");
+//    }
+//    
+//    document.getElementById("queenstownEssenButton").onclick = function () {
+//        paragraphAendern("queenstownEssenButton");
+//    }
+//    
+//    
+//    
+//        document.getElementById("fjordland&SouthlandInfoButton").onclick = function () {
+//        paragraphAendern("fjordland&SouthlandInfoButton");
+//    }
+//    
+//    document.getElementById("fjordland&SouthlandKlimaButton").onclick = function () {
+//        paragraphAendern("fjordland&SouthlandKlimaButton");
+//    }
+//    
+//    document.getElementById("fjordland&SouthlandTodoButton").onclick = function () {
+//       paragraphAendern("fjordland&SouthlandTodoButton");
+//    }
+//    
+//    document.getElementById("fjordland&SouthlandEssenButton").onclick = function () {
+//        paragraphAendern("fjordland&SouthlandEssenButton");
+//    }
+//    
+//    
+//    
+//    document.getElementById("westCoastInfoButton").onclick = function () {
+//        paragraphAendern("westCoastInfoButton");
+//    }
+//    
+//    document.getElementById("westCoastKlimaButton").onclick = function () {
+//        paragraphAendern("westCoastKlimaButton");
+//    }
+//    
+//    document.getElementById("westCoastTodoButton").onclick = function () {
+//       paragraphAendern("westCoastTodoButton");
+//    }
+//    
+//    document.getElementById("westCoastEssenButton").onclick = function () {
+//        paragraphAendern("westCoastEssenButton");
+//    }
+//
+//    
+//    
+    
+    // Button zum Absenden des Formulars
+    document.getElementById("absendenButton").onclick = function () {
+        checkEingaben (); 
+    } 
 }
 
 window.addEventListener("load", init, false);
+
+
+
+//================================================================================================
+//
+//  Hilfsfunktionen
+//
+//=================================================================================================
 
 function paragraphAendern (button) {
     switch (button) {
@@ -651,6 +667,82 @@ function paragraphAendern (button) {
             document.getElementById("westCoastParagraph").innerHTML = "";
         break;
     }
+}
+
+function checkEingaben () {
+    checkAufLeereEingaben ();
+    //checkAufRichtigesFormat ();
+}
+
+function checkAufLeereEingaben () {
+    if (leereEingabe(nachname)) {
+        document.getElementById("nachnameWarnung").innerHTML = "<-- Bitte ausfüllen";
+    }
+    
+    if (leereEingabe(anschrift)) {
+        document.getElementById("anschriftWarnung").innerHTML = "<-- Bitte ausfüllen";
+    }
+    
+    if (leereEingabe(plz)) {
+        document.getElementById("plzWarnung").innerHTML = "<-- Bitte ausfüllen";
+    }
+    
+    if (leereEingabe(stadt)) {
+        document.getElementById("stadtWarnung").innerHTML = "<-- Bitte ausfüllen";
+    }
+    
+    if (leereEingabe(land)) {
+        document.getElementById("landWarnung").innerHTML = "<-- Bitte ausfüllen";
+    }
+}
+
+function leereEingabe (inputName) {
+    var para;
+    
+    switch (inputName) {
+        case vorname:
+            para = document.newsFormular.vorname.value;
+            break;
+            
+        case nachname:
+            para = document.newsFormular.nachname.value;
+            break;
+            
+        case email:
+            para = document.newsFormular.email.value;
+            break;
+            
+        case tel:
+            para = document.newsFormular.tel.value;
+            break;
+            
+        case anschrift:
+            para = document.newsFormular.anschrift.value;
+            break;
+            
+        case plz:
+            para = document.newsFormular.plz.value;
+            break;
+            
+        case stadt:
+            para = document.newsFormular.stadt.value;
+            break;
+            
+        case land:
+            para = document.newsFormular.land.value;
+            break;
+    }
+    
+    if (para == "") return true;
+    else return false;
+}
+
+function checkAufRichtigesFormat () {
+    if (document.newsFormular.vorname.value == "") {
+        
+        document.getElementById("vornameWarnung").innerHTML = "<-- Eingabe ist kein Name";
+    }
+    //Wenn emial nicht leer, hat email ein @ und einen punkt?
 }
 
 //=================================================================================================
