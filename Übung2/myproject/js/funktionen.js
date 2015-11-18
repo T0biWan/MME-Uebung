@@ -311,9 +311,9 @@ window.addEventListener("load", init, false);
 
 //================================================================================================
 //
-//  Hilfsfunktionen
+//  Module
 //
-//=================================================================================================
+//================================================================================================
 
 function paragraphAendern (button) {
     switch (button) {
@@ -670,78 +670,78 @@ function paragraphAendern (button) {
 }
 
 function checkEingaben () {
-    checkAufLeereEingaben ();
-    //checkAufRichtigesFormat ();
+    checkEingabe(nachname);
 }
 
-function checkAufLeereEingaben () {
-    if (leereEingabe(nachname)) {
-        document.getElementById("nachnameWarnung").innerHTML = "<-- Bitte ausfüllen";
-    }
+function checkEingabe (inputName) {
+    //Variablen deklarieren
+    //Input zeigt auf die Texteingabe
+    //Output zeigt auf das Warnlabel
+    var input;
+    var output;
     
-    if (leereEingabe(anschrift)) {
-        document.getElementById("anschriftWarnung").innerHTML = "<-- Bitte ausfüllen";
-    }
-    
-    if (leereEingabe(plz)) {
-        document.getElementById("plzWarnung").innerHTML = "<-- Bitte ausfüllen";
-    }
-    
-    if (leereEingabe(stadt)) {
-        document.getElementById("stadtWarnung").innerHTML = "<-- Bitte ausfüllen";
-    }
-    
-    if (leereEingabe(land)) {
-        document.getElementById("landWarnung").innerHTML = "<-- Bitte ausfüllen";
-    }
-}
-
-function leereEingabe (inputName) {
-    var para;
-    
+    //Variablen mit Aufrufparameter initialisieren
     switch (inputName) {
         case vorname:
-            para = document.newsFormular.vorname.value;
+            input = document.newsFormular.vorname.value;
+            output = "vornameWarnung";
             break;
             
         case nachname:
-            para = document.newsFormular.nachname.value;
+            input = document.newsFormular.nachname.value;
+            output = "nachnameWarnung";
             break;
             
         case email:
-            para = document.newsFormular.email.value;
+            input = document.newsFormular.email.value;
+            output = "nachnameWarnung";
             break;
             
         case tel:
-            para = document.newsFormular.tel.value;
+            input = document.newsFormular.tel.value;
+            output = "telWarnung";
             break;
             
         case anschrift:
-            para = document.newsFormular.anschrift.value;
+            input = document.newsFormular.anschrift.value;
+            output = "anschriftWarnung";
             break;
             
         case plz:
-            para = document.newsFormular.plz.value;
+            input = document.newsFormular.plz.value;
+            output = "plzWarnung";
             break;
             
         case stadt:
-            para = document.newsFormular.stadt.value;
+            input = document.newsFormular.stadt.value;
+            output = "stadtWarnung";
             break;
             
         case land:
-            para = document.newsFormular.land.value;
+            input = document.newsFormular.land.value;
+            output = "landWarnung";
             break;
     }
     
-    if (para == "") return true;
-    else return false;
+    //Prüfung und Reaktion auf leere Eingabe
+    if (eingabeIstLeer(input)) document.getElementById(output).innerHTML = "<-- Bitte ausfüllen";
+    else checkFormat ();
 }
 
-function checkAufRichtigesFormat () {
-    if (document.newsFormular.vorname.value == "") {
-        
-        document.getElementById("vornameWarnung").innerHTML = "<-- Eingabe ist kein Name";
-    }
+
+
+//================================================================================================
+//
+//  Hilfsfunktionen
+//
+//================================================================================================
+
+function eingabeIstLeer (inputName) {
+    return inputName == "";
+}
+
+function checkFormat () {
+    alert("checked");
     //Wenn emial nicht leer, hat email ein @ und einen punkt?
 }
 
