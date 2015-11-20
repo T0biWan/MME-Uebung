@@ -672,12 +672,12 @@ function paragraphAendern (button) {
 function checkEingaben () {
     checkEingabe(nachname, name);
     checkEingabe(vorname, name);
-//    checkEingabe(email, email);
+    checkEingabe(email, email);
 //    checkEingabe(tel, tel);
 //    checkEingabe(strasse, strasse);
 //    checkEingabe(plz, plz);
-//    checkEingabe(stadt, name);
-//    checkEingabe(land, name);
+    checkEingabe(stadt, name);
+    checkEingabe(land, name);
 }
 
 function checkEingabe (inputName, inputTyp) {
@@ -754,25 +754,11 @@ function falschesFormat (input, output, inputTyp) {
     var regEx;
     switch (inputTyp) {
         case name:
-            //Kann mit einem großenbuchstaben beginnen
-            //Endet mit einen kleinen Buchstaben
-            //Auf Länge testen klappt nicht...dadurch ist folgendes möglich "AaTa"...
-            //Dadurch sind doppelnamen nicht möglich...
-            
-            //regEx = /^(\p{L}\p{Ll}{0,20}$)|(\p{L}\p{Ll}{0,20}(-|_| - | _ | )\p{L}\p{Ll}{0,20}$)/;
-            //regEx = /^\p{L}\p{Ll}{0,20}$/;
-            
-            //Da RegEx hier nicht funktioniert nun dieser lächerliche Mist.
-            //Kontrolliert das keine Zahl eingetragen wird.
-            //Das nur ein großer Buchstabe eingetragen wird, muss aber nicht
-            //Keine Zahl eingetragen wird
-            //regEx = /^[A-Z]?[a-z]$/;
-            //regEx = /^\p{Ll}$/;
             regEx = /(([A-Z]?[a-z]{0,20})(( |-|_| - | _ )([A-Z]?[a-z]{0,20}))?)$/;
             break;
         
         case email:
-            regEx = /a/;
+            regEx = /^[-a-z0-9~!$%^&*_=+}{\'?]+(\.[-a-z0-9~!$%^&*_=+}{\'?]+)*@[-a-z0-9_][-a-z0-9_]+\.[-a-z0-9_]{2,4}$/i;
             break;
         
         case plz:
