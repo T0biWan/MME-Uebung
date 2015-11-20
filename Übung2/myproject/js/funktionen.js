@@ -9,7 +9,7 @@
 //Durch dieses Konstrukt wird sichergestellt das die Funktionen erst verknüpft werden,
 //wenn die Seite geladen ist.
 function init() {
-    // Buttons zum ändern der Texte für die Regionen
+    //Buttons zum ändern der Texte für die Regionen
 //    document.getElementById("aucklandInfoButton").onclick = function () {
 //        paragraphAendern("aucklandInfoButton");
 //    }
@@ -764,7 +764,9 @@ function checkFormat (input, output, inputTyp) {
             break;
         
         case plz:
-            regEx = /[5]/;
+            //Prüft nur ob es mindestens so lang ist.
+            //regEx = /[0-9]{5}/;
+            regEx = /^[0-9]{5}$/;
             break;
     }
     if (!regEx.test(input)) document.getElementById(output).innerHTML = "<-- Falsches Format";
