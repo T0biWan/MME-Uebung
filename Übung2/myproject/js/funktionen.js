@@ -671,7 +671,6 @@ function paragraphAendern (button) {
 
 function checkEingaben () {
     checkEingabe(nachname, name);
-    checkEingabe(plz, plz);
 }
 
 function checkEingabe (inputName, inputTyp) {
@@ -683,50 +682,50 @@ function checkEingabe (inputName, inputTyp) {
     
     //Variablen mit Aufrufparameter initialisieren
     switch (inputName) {
-        case vorname:
-            input = document.newsFormular.vorname.value;
-            output = "vornameWarnung";
-            break;
-            
+//        case vorname:
+//            input = document.newsFormular.vorname.value;
+//            output = "vornameWarnung";
+//            break;
+//            
         case nachname:
             input = document.newsFormular.nachname.value;
             output = "nachnameWarnung";
             break;
-            
-        case email:
-            input = document.newsFormular.email.value;
-            output = "nachnameWarnung";
-            break;
-            
-        case tel:
-            input = document.newsFormular.tel.value;
-            output = "telWarnung";
-            break;
-            
-        case anschrift:
-            input = document.newsFormular.anschrift.value;
-            output = "anschriftWarnung";
-            break;
-            
-        case plz:
-            input = document.newsFormular.plz.value;
-            output = "plzWarnung";
-            break;
-            
-        case stadt:
-            input = document.newsFormular.stadt.value;
-            output = "stadtWarnung";
-            break;
-            
-        case land:
-            input = document.newsFormular.land.value;
-            output = "landWarnung";
-            break;
+//            
+//        case email:
+//            input = document.newsFormular.email.value;
+//            output = "nachnameWarnung";
+//            break;
+//            
+//        case tel:
+//            input = document.newsFormular.tel.value;
+//            output = "telWarnung";
+//            break;
+//            
+//        case anschrift:
+//            input = document.newsFormular.anschrift.value;
+//            output = "anschriftWarnung";
+//            break;
+//            
+//        case plz:
+//            input = document.newsFormular.plz.value;
+//            output = "plzWarnung";
+//            break;
+//            
+//        case stadt:
+//            input = document.newsFormular.stadt.value;
+//            output = "stadtWarnung";
+//            break;
+//            
+//        case land:
+//            input = document.newsFormular.land.value;
+//            output = "landWarnung";
+//            break;
     }
     
-    //Prüfung und Reaktion auf leere Eingabe
     if (eingabeIstLeer(input)) document.getElementById(output).innerHTML = "<-- Bitte ausfüllen";
-    else checkFormat (input, output, inputTyp);
+    if (falschesFormat (input, output, inputTyp)) document.getElementById(output).innerHTML = "<-- Falsches Format";
+    else document.getElementById(output).innerHTML = "";
 }
 
 
@@ -741,7 +740,7 @@ function eingabeIstLeer (inputName) {
     return inputName == "";
 }
 
-function checkFormat (input, output, inputTyp) {
+function falschesFormat (input, output, inputTyp) {
     //Variable deklarieren
     //Abhängig von inputTyp wird sie initialisert.
     //Im Anschluss wird verglichen.
@@ -763,16 +762,16 @@ function checkFormat (input, output, inputTyp) {
             regEx = /^[A-Z]?[a-z]$/;
             break;
         
+        case email:
+            regEx = /a/;
+            break;
+        
         case plz:
-            //Prüft nur ob es mindestens so lang ist.
-            //regEx = /[0-9]{5}/;
+            //Prüft ob fünf Zahlen eingegeben wurden
             regEx = /^[0-9]{5}$/;
             break;
     }
-    if (!regEx.test(input)) document.getElementById(output).innerHTML = "<-- Falsches Format";
-    
-    //Wenn alle Tests positiv verlaufen sind wird das Warn-label geleert.
-    else document.getElementById(output).innerHTML = "";
+    return (regEx.test(input));
 }
 
 //=================================================================================================
