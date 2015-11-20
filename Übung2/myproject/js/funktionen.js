@@ -671,6 +671,13 @@ function paragraphAendern (button) {
 
 function checkEingaben () {
     checkEingabe(nachname, name);
+    checkEingabe(vorname, name);
+    checkEingabe(email, email);
+    checkEingabe(tel, tel);
+    checkEingabe(strasse, strasse);
+    checkEingabe(plz, plz);
+    checkEingabe(stadt, name);
+    checkEingabe(land, name);
 }
 
 function checkEingabe (inputName, inputTyp) {
@@ -682,49 +689,49 @@ function checkEingabe (inputName, inputTyp) {
     
     //Variablen mit Aufrufparameter initialisieren
     switch (inputName) {
-//        case vorname:
-//            input = document.newsFormular.vorname.value;
-//            output = "vornameWarnung";
-//            break;
-//            
+        case vorname:
+            input = document.newsFormular.vorname.value;
+            output = "vornameWarnung";
+            break;
+            
         case nachname:
             input = document.newsFormular.nachname.value;
             output = "nachnameWarnung";
             break;
-//            
-//        case email:
-//            input = document.newsFormular.email.value;
-//            output = "nachnameWarnung";
-//            break;
-//            
-//        case tel:
-//            input = document.newsFormular.tel.value;
-//            output = "telWarnung";
-//            break;
-//            
-//        case anschrift:
-//            input = document.newsFormular.anschrift.value;
-//            output = "anschriftWarnung";
-//            break;
-//            
-//        case plz:
-//            input = document.newsFormular.plz.value;
-//            output = "plzWarnung";
-//            break;
-//            
-//        case stadt:
-//            input = document.newsFormular.stadt.value;
-//            output = "stadtWarnung";
-//            break;
-//            
-//        case land:
-//            input = document.newsFormular.land.value;
-//            output = "landWarnung";
-//            break;
+            
+        case email:
+            input = document.newsFormular.email.value;
+            output = "emailWarnung";
+            break;
+            
+        case tel:
+            input = document.newsFormular.tel.value;
+            output = "telWarnung";
+            break;
+            
+        case strasse:
+            input = document.newsFormular.strasse.value;
+            output = "strasseWarnung";
+            break;
+            
+        case plz:
+            input = document.newsFormular.plz.value;
+            output = "plzWarnung";
+            break;
+            
+        case stadt:
+            input = document.newsFormular.stadt.value;
+            output = "stadtWarnung";
+            break;
+            
+        case land:
+            input = document.newsFormular.land.value;
+            output = "landWarnung";
+            break;
     }
     
     if (eingabeIstLeer(input)) document.getElementById(output).innerHTML = "<-- Bitte ausfüllen";
-    if (falschesFormat (input, output, inputTyp)) document.getElementById(output).innerHTML = "<-- Falsches Format";
+    //if (falschesFormat (input, output, inputTyp)) document.getElementById(output).innerHTML = "<-- Falsches Format";
     else document.getElementById(output).innerHTML = "";
 }
 
