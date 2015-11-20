@@ -1,14 +1,33 @@
 //================================================================================================
-//    JavaScript-Datei um die Texte der einzelnen Regionen per Klick zu ändern
+//    JavaScript-Datei welche die Funktionen der Seite ermöglicht.
 //
-//    Datei: buttons.js
+//    Datei: funktionen.js
 //    Datum: 15.11.2015
 //    Autor: Tobias & Leon
 //=================================================================================================
 
-//Durch dieses Konstrukt wird sichergestellt das die Funktionen erst verknüpft werden,
-//wenn die Seite geladen ist.
+//Durch dieses Konstrukt wird sichergestellt das die Funktionen
+//erst mit den Buttons verknüpft werden, wenn die Seite geladen ist.
 function init() {
+    buttonsInitialisieren();
+}
+
+window.addEventListener("load", init, false);
+
+
+
+//================================================================================================
+//
+//  Module
+//
+//================================================================================================
+
+function buttonsInitialisieren() {
+    // Button zum Absenden des Formulars
+    document.getElementById("absendenButton").onclick = function () {
+        checkEingaben (); 
+    }
+    
     //Buttons zum ändern der Texte für die Regionen
 //    document.getElementById("aucklandInfoButton").onclick = function () {
 //        paragraphAendern("aucklandInfoButton");
@@ -295,25 +314,7 @@ function init() {
 //    document.getElementById("westCoastEssenButton").onclick = function () {
 //        paragraphAendern("westCoastEssenButton");
 //    }
-//
-//    
-//    
-    
-    // Button zum Absenden des Formulars
-    document.getElementById("absendenButton").onclick = function () {
-        checkEingaben (); 
-    } 
 }
-
-window.addEventListener("load", init, false);
-
-
-
-//================================================================================================
-//
-//  Module
-//
-//================================================================================================
 
 function paragraphAendern (button) {
     switch (button) {
@@ -680,6 +681,14 @@ function checkEingaben () {
     checkEingabe(land, name);
 }
 
+
+
+//================================================================================================
+//
+//  Hilfsfunktionen
+//
+//================================================================================================
+
 function checkEingabe (inputName, inputTyp) {
     //Variablen deklarieren
     //Input zeigt auf die Texteingabe
@@ -734,14 +743,6 @@ function checkEingabe (inputName, inputTyp) {
     else if (falschesFormat (input, output, inputTyp)) document.getElementById(output).innerHTML = "<-- Falsches Format";
     else document.getElementById(output).innerHTML = "";
 }
-
-
-
-//================================================================================================
-//
-//  Hilfsfunktionen
-//
-//================================================================================================
 
 function eingabeIstLeer (inputName) {
     return inputName == "";
