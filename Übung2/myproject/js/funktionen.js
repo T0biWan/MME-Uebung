@@ -672,12 +672,12 @@ function paragraphAendern (button) {
 function checkEingaben () {
     checkEingabe(nachname, name);
     checkEingabe(vorname, name);
-    checkEingabe(email, email);
-    checkEingabe(tel, tel);
-    checkEingabe(strasse, strasse);
-    checkEingabe(plz, plz);
-    checkEingabe(stadt, name);
-    checkEingabe(land, name);
+//    checkEingabe(email, email);
+//    checkEingabe(tel, tel);
+//    checkEingabe(strasse, strasse);
+//    checkEingabe(plz, plz);
+//    checkEingabe(stadt, name);
+//    checkEingabe(land, name);
 }
 
 function checkEingabe (inputName, inputTyp) {
@@ -766,7 +766,9 @@ function falschesFormat (input, output, inputTyp) {
             //Kontrolliert das keine Zahl eingetragen wird.
             //Das nur ein großer Buchstabe eingetragen wird, muss aber nicht
             //Keine Zahl eingetragen wird
-            regEx = /^[A-Z]?[a-z]$/;
+            //regEx = /^[A-Z]?[a-z]$/;
+            //regEx = /^\p{Ll}$/;
+            regEx = /(([A-Z]?[a-z]{0,20})(( |-|_| - | _ )([A-Z]?[a-z]{0,20}))?)$/;
             break;
         
         case email:
@@ -778,7 +780,8 @@ function falschesFormat (input, output, inputTyp) {
             regEx = /^[0-9]{5}$/;
             break;
     }
-    return (regEx.test(input));
+    alert("falsches Format: " + !regEx.test(input));
+    return (!regEx.test(input));
 }
 
 //=================================================================================================
