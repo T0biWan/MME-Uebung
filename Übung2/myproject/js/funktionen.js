@@ -731,7 +731,7 @@ function checkEingabe (inputName, inputTyp) {
     }
     
     if (eingabeIstLeer(input)) document.getElementById(output).innerHTML = "<-- Bitte ausfüllen";
-    //if (falschesFormat (input, output, inputTyp)) document.getElementById(output).innerHTML = "<-- Falsches Format";
+    else if (falschesFormat (input, output, inputTyp)) document.getElementById(output).innerHTML = "<-- Falsches Format";
     else document.getElementById(output).innerHTML = "";
 }
 
