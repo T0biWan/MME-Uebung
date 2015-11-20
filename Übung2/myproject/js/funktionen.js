@@ -675,7 +675,7 @@ function checkEingaben () {
     checkEingabe(email, email);
 //    checkEingabe(tel, tel);
 //    checkEingabe(strasse, strasse);
-//    checkEingabe(plz, plz);
+    checkEingabe(plz, plz);
     checkEingabe(stadt, name);
     checkEingabe(land, name);
 }
@@ -754,7 +754,7 @@ function falschesFormat (input, output, inputTyp) {
     var regEx;
     switch (inputTyp) {
         case name:
-            regEx = /(([A-Z]?[a-z]{0,20})(( |-|_| - | _ )([A-Z]?[a-z]{0,20}))?)$/;
+            regEx = /^(([A-Z]?[a-z]{0,20})(( |-|_| - | _ )([A-Z]?[a-z]{0,20}))?)$/;
             break;
         
         case email:
@@ -763,7 +763,7 @@ function falschesFormat (input, output, inputTyp) {
         
         case plz:
             //Prüft ob fünf Zahlen eingegeben wurden
-            regEx = /^[0-9]{5}$/;
+            regEx = /^\d{5}$/;
             break;
     }
     alert("falsches Format: " + !regEx.test(input));
