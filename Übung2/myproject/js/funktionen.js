@@ -706,14 +706,14 @@ function paragraphAendern (button) {
 }
 
 function checkEingaben () {
-    return checkEingabe(nachname, name, true);
-    checkEingabe(vorname, name, false);
-    checkEingabe(email, email, false);
-    checkEingabe(tel, tel, false);
-    checkEingabe(strasse, strasse, true);
-    checkEingabe(plz, plz, true);
-    checkEingabe(stadt, name, true);
-    checkEingabe(land, name, true);
+    return checkEingabe(vorname, name, false) &&
+        checkEingabe(nachname, name, true) && 
+        checkEingabe(email, email, false) && 
+        checkEingabe(tel, tel, false) && 
+        checkEingabe(strasse, strasse, true) && 
+        checkEingabe(plz, plz, true) && 
+        checkEingabe(stadt, name, true) && 
+        checkEingabe(land, name, true);
 }
 
 
@@ -780,6 +780,7 @@ function checkEingabe (inputName, inputTyp, required) {
     }
     
     else if (falschesFormat (input, output, inputTyp)) document.getElementById(output).innerHTML = "<-- Falsches Format";
+    
     else {
         document.getElementById(output).innerHTML = "";
         eingabeKorrekt = true;
