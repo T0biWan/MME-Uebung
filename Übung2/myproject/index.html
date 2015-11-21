@@ -346,6 +346,73 @@
                     <button id="westCoastEssenButton">Essen</button>
                 </div>
             </div>
+            <div id="formular">
+                <form class="newsFormular" action="http://www.formular-chef.de/fc.cgi" name="newsFormular">
+<!--
+                    Ich habe das Attribut type von input entfernt da es meine Abfrage
+                    per RegEx gestört hat.
+-->
+                    <div>
+                        <label for="vorname">Vorname:</label>
+                        <input id="vorname" name="vorname">
+                        <label for="vorname"  id="vornameWarnung"></label>
+                    </div>
+                    
+                    <div>
+                        <label for="nachname">Nachname*: </label>
+                        <input id="nachname" name="nachname">
+                        <label for="nachname" id="nachnameWarnung"></label>
+                    </div>
+                    
+                    <div>
+                        <label for="email">E-Mail:</label>
+                        <input id="email" name="email">
+                        <label for="email" id="emailWarnung"></label>
+                    </div>
+                    
+                    <div>
+                        <label for="tel">Telefonnr.:</label>
+                        <input id="tel" name="tel">
+                        <label for="tel" id="telWarnung"></label>
+                    </div>
+                    
+                    <div>
+                        <label for="strasse">Straße, Hausnr.*:</label>
+                        <input id="strasse" name="strasse">
+                        <label for="strasse" id="strasseWarnung"></label>
+                    </div>
+                    
+                    <div>
+                        <label for="plz">Postleitzahl*:</label>
+                        <input id="plz" name="plz">
+                        <label for="plz" id="plzWarnung"></label>
+                    </div>
+                    
+                    <div>
+                        <label for="stadt">Stadt*:</label>
+                        <input id="stadt" name="stadt">
+                        <label for="stadt" id="stadtWarnung"></label>
+                    </div>
+                    
+                    <div>
+                        <label for="land">Land*:</label>
+                        <input id="land" name="land">
+                        <label for="land" id="landWarnung"></label>
+                    </div>
+                    
+<!--
+                    <div>
+                        <label for="captcha">Bitte gib die gezeigte Zahl ein*:</label>
+                        <input type="number" id="captcha" name="captcha" required>
+                    </div>
+-->
+                    
+                    <div>
+<!--                    type="submit" etfernt, da sonst .onclick nicht funktioniert-->
+                        <button id="absendenButton">Absenden</button>
+                    </div>
+                </form>
+            </div>
         </main>
         
         
