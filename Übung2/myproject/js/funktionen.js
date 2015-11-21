@@ -22,14 +22,6 @@ window.addEventListener("load", init, false);
 //
 //================================================================================================
 
-function darfNichtSende() {
-    return true;
-}
-
-function sendeVerbot (event) {
-    event.preventDefault();
-}
-
 function buttonsInitialisieren() {
     //Button zum Absenden des Formulars
     document.getElementById("absendenButton").onclick = function (event) {
@@ -714,8 +706,7 @@ function paragraphAendern (button) {
 }
 
 function checkEingaben () {
-    return false; 
-    checkEingabe(nachname, name, true);
+    return checkEingabe(nachname, name, true);
     checkEingabe(vorname, name, false);
     checkEingabe(email, email, false);
     checkEingabe(tel, tel, false);
@@ -739,6 +730,7 @@ function checkEingabe (inputName, inputTyp, required) {
     //Output zeigt auf das Warnlabel
     var input;
     var output;
+    var eingabeKorrekt = false;
     
     //Variablen mit Aufrufparameter initialisieren
     switch (inputName) {
@@ -788,7 +780,12 @@ function checkEingabe (inputName, inputTyp, required) {
     }
     
     else if (falschesFormat (input, output, inputTyp)) document.getElementById(output).innerHTML = "<-- Falsches Format";
-    else document.getElementById(output).innerHTML = "";
+    else {
+        document.getElementById(output).innerHTML = "";
+        eingabeKorrekt = true;
+    }
+    
+    return eingabeKorrekt;
 }
 
 function eingabeIstLeer (inputName) {
