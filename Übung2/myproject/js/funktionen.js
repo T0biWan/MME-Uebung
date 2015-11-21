@@ -671,14 +671,14 @@ function paragraphAendern (button) {
 }
 
 function checkEingaben () {
-    checkEingabe(nachname, name);
-    checkEingabe(vorname, name);
-    checkEingabe(email, email);
-    checkEingabe(tel, tel);
-    checkEingabe(strasse, strasse);
-    checkEingabe(plz, plz);
-    checkEingabe(stadt, name);
-    checkEingabe(land, name);
+    checkEingabe(vorname, name, false);
+    checkEingabe(nachname, name, true);
+    checkEingabe(email, email, false);
+    checkEingabe(tel, tel, false);
+    checkEingabe(strasse, strasse, true);
+    checkEingabe(plz, plz, true);
+    checkEingabe(stadt, name, true);
+    checkEingabe(land, name, true);
 }
 
 
@@ -689,7 +689,7 @@ function checkEingaben () {
 //
 //================================================================================================
 
-function checkEingabe (inputName, inputTyp) {
+function checkEingabe (inputName, inputTyp, required) {
     //Variablen deklarieren
     //Input zeigt auf die Texteingabe
     //Output zeigt auf das Warnlabel
@@ -739,7 +739,10 @@ function checkEingabe (inputName, inputTyp) {
             break;
     }
     
-    if (eingabeIstLeer(input)) document.getElementById(output).innerHTML = "<-- Bitte ausfüllen";
+    if (eingabeIstLeer(input)) {
+        if (required) document.getElementById(output).innerHTML = "<-- Bitte ausfüllen";
+    }
+    
     else if (falschesFormat (input, output, inputTyp)) document.getElementById(output).innerHTML = "<-- Falsches Format";
     else document.getElementById(output).innerHTML = "";
 }
