@@ -22,11 +22,54 @@ window.addEventListener("load", init, false);
 //
 //================================================================================================
 
+function darfNichtSende() {
+    return true;
+}
+
+function sendeVerbot (event) {
+    event.preventDefault();
+}
+
 function buttonsInitialisieren() {
-    // Button zum Absenden des Formulars
-    document.getElementById("absendenButton").onclick = function () {
-        checkEingaben (); 
+    //Button zum Absenden des Formulars
+    document.getElementById("absendenButton").onclick = function (event) {
+        if(!checkEingaben ()) event.preventDefault();
     }
+    
+    
+    
+//    document.getElementById("absendenButton").addEventListener("click", function (evt) {
+//        alert("Clicked!");
+//        evt.preventDefault();
+//    }, false);
+    
+//    document.getElementById("absendenButton").onclick = function (event) {
+//        alert("Clicked!");
+//        event.preventDefault();
+//        return true;
+//    }
+    
+//    document.getElementById("absendenButton").onclick = function (event) {
+//        alert("Clicked!");
+//        if(darfNichtSenden()) event.preventDefault();
+//    }
+    
+//    document.getElementById("absendenButton").addEventListener("click", function (event) {
+//        alert("Clicked!");
+//        if(darfNichtSenden()) event.preventDefault();
+//    }, false);
+    
+
+    
+    //document.getElementById("absendenButton").addEventListener("click", sendeVerbot(event), false);
+    
+    
+    
+    
+    
+    
+    
+    
     
     //Buttons zum ändern der Texte für die Regionen
 //    document.getElementById("aucklandInfoButton").onclick = function () {
@@ -671,8 +714,9 @@ function paragraphAendern (button) {
 }
 
 function checkEingaben () {
-    checkEingabe(vorname, name, false);
+    return false; 
     checkEingabe(nachname, name, true);
+    checkEingabe(vorname, name, false);
     checkEingabe(email, email, false);
     checkEingabe(tel, tel, false);
     checkEingabe(strasse, strasse, true);
