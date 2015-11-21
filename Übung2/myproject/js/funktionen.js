@@ -777,6 +777,7 @@ function checkEingabe (inputName, inputTyp, required) {
     
     if (eingabeIstLeer(input)) {
         if (required) document.getElementById(output).innerHTML = "<-- Bitte ausfüllen";
+        else eingabeKorrekt = true;
     }
     
     else if (falschesFormat (input, output, inputTyp)) document.getElementById(output).innerHTML = "<-- Falsches Format";
