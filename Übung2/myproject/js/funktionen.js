@@ -35,18 +35,22 @@ function funktionenInitialisieren() {
     //Wird ein Button geklickt, wird über paragraphAendern der jeweilige Text in p geändert.
     document.getElementById("aucklandInfoButton").onclick = function () {
         paragraphAendern("aucklandInfoButton");
+        bildAendern("aucklandInfoButton");
     }
     
     document.getElementById("aucklandKlimaButton").onclick = function () {
         paragraphAendern("aucklandKlimaButton");
+        bildAendern("aucklandKlimaButton");
     }
     
     document.getElementById("aucklandTodoButton").onclick = function () {
-       paragraphAendern("aucklandTodoButton");
+        paragraphAendern("aucklandTodoButton");
+        bildAendern("aucklandTodoButton");
     }
     
     document.getElementById("aucklandEssenButton").onclick = function () {
         paragraphAendern("aucklandEssenButton");
+        bildAendern("aucklandEssenButton");
     }
     
     
@@ -672,6 +676,296 @@ function paragraphAendern (button) {
             document.getElementById("westCoastTextart").innerHTML = "Essen:";
             document.getElementById("westCoastParagraph").innerHTML = "";
         break;
+    }
+}
+
+function bildAendern(button) {
+    switch (button) {
+        case "aucklandInfoButton":
+            document.getElementById("aucklandImg").src = "pictures/auckland/DSC_0146.JPG";
+            break;
+            
+        case "aucklandKlimaButton":
+            document.getElementById("aucklandImg").src = "pictures/auckland/P1120750.JPG";
+            break;
+            
+        case "aucklandTodoButton":
+            document.getElementById("aucklandImg").src = "pictures/auckland/DSCN0961.JPG";
+            break;
+        
+        case "aucklandEssenButton":
+            document.getElementById("aucklandImg").src = "pictures/auckland/DSC_0917.JPG";
+            break;
+        
+            
+        
+        case "northlandInfoButton":
+            document.getElementById("northlandImg").src = "pictures/northland/DSCN1252.JPG";
+            break;
+            
+        case "northlandKlimaButton":
+            document.getElementById("northlandImg").src = "pictures/northland/P1140021.JPG";
+            break;
+            
+        case "northlandTodoButton":
+            document.getElementById("northlandImg").src = "pictures/northland/DSCN1225.JPG";
+            break;
+        
+        case "northlandEssenButton":
+            document.getElementById("northlandImg").src = "pictures/northland/DSCN1339.JPG";
+            break;
+        
+            
+        
+        case "coromandelPeninsulaInfoButton":
+            document.getElementById("coromandelPeninsulaImg").src = "pictures/coromandelPeninsula/P1160313.JPG";
+            break;
+            
+        case "coromandelPeninsulaKlimaButton":
+            document.getElementById("coromandelPeninsulaImg").src = "pictures/coromandelPeninsula/P1160208.JPG";
+            break;
+            
+        case "coromandelPeninsulaTodoButton":
+            document.getElementById("coromandelPeninsulaImg").src = "pictures/coromandelPeninsula/P1160365.JPG";
+            break;
+        
+        case "coromandelPeninsulaEssenButton":
+            document.getElementById("coromandelPeninsulaImg").src = "pictures/coromandelPeninsula/P1160296.JPG";
+            break;
+        
+            
+        
+        case "waikato&KingCountryInfoButton":
+            document.getElementById("waikato&KingCountryImg").src = "pictures/waikato&KingCountry/X.JPG";
+            break;
+            
+        case "waikato&KingCountryKlimaButton":
+            document.getElementById("waikato&KingCountryImg").src = "pictures/waikato&KingCountry/X.JPG";
+            break;
+            
+        case "waikato&KingCountryTodoButton":
+            document.getElementById("waikato&KingCountryImg").src = "pictures/waikato&KingCountry/X.JPG";
+            break;
+        
+        case "waikato&KingCountryEssenButton":
+            document.getElementById("waikato&KingCountryImg").src = "pictures/waikato&KingCountry/X.JPG";
+            break;
+        
+            
+        
+        case "bayOfPlentyInfoButton":
+            document.getElementById("bayOfPlentyImg").src = "pictures/bayOfPlenty/X.JPG";
+            break;
+            
+        case "bayOfPlentyKlimaButton":
+            document.getElementById("bayOfPlentyImg").src = "pictures/bayOfPlenty/X.JPG";
+            break;
+            
+        case "bayOfPlentyTodoButton":
+            document.getElementById("bayOfPlentyImg").src = "pictures/bayOfPlenty/X.JPG";
+            break;
+        
+        case "bayOfPlentyEssenButton":
+            document.getElementById("bayOfPlentyImg").src = "pictures/bayOfPlenty/X.JPG";
+            break;
+        
+            
+        
+        case "eastCoastInfoButton":
+            document.getElementById("eastCoastImg").src = "pictures/eastCoast/X.JPG";
+            break;
+            
+        case "eastCoastKlimaButton":
+            document.getElementById("eastCoastImg").src = "pictures/eastCoast/X.JPG";
+            break;
+            
+        case "eastCoastTodoButton":
+            document.getElementById("eastCoastImg").src = "pictures/eastCoast/X.JPG";
+            break;
+        
+        case "eastCoastEssenButton":
+            document.getElementById("eastCoastImg").src = "pictures/eastCoast/X.JPG";
+            break;
+        
+            
+        
+        case "zentraleHochebeneInfoButton":
+            document.getElementById("zentraleHochebeneImg").src = "pictures/zentraleHochebene/X.JPG";
+            break;
+            
+        case "zentraleHochebeneKlimaButton":
+            document.getElementById("zentraleHochebeneImg").src = "pictures/zentraleHochebene/X.JPG";
+            break;
+            
+        case "zentraleHochebeneTodoButton":
+            document.getElementById("zentraleHochebeneImg").src = "pictures/zentraleHochebene/X.JPG";
+            break;
+        
+        case "zentraleHochebeneEssenButton":
+            document.getElementById("zentraleHochebeneImg").src = "pictures/zentraleHochebene/X.JPG";
+            break;
+        
+            
+        
+        case "taranakiInfoButton":
+            document.getElementById("taranakiImg").src = "pictures/taranaki/X.JPG";
+            break;
+            
+        case "taranakiKlimaButton":
+            document.getElementById("taranakiImg").src = "pictures/taranaki/X.JPG";
+            break;
+            
+        case "taranakiTodoButton":
+            document.getElementById("taranakiImg").src = "pictures/taranaki/X.JPG";
+            break;
+        
+        case "taranakiEssenButton":
+            document.getElementById("taranakiImg").src = "pictures/taranaki/X.JPG";
+            break;
+        
+            
+        
+        case "whanganui&PalmerstonNorthInfoButton":
+            document.getElementById("whanganui&PalmerstonNorthImg").src = "pictures/whanganui&PalmerstonNorth/X.JPG";
+            break;
+            
+        case "whanganui&PalmerstonNorthKlimaButton":
+            document.getElementById("whanganui&PalmerstonNorthImg").src = "pictures/whanganui&PalmerstonNorth/X.JPG";
+            break;
+            
+        case "whanganui&PalmerstonNorthTodoButton":
+            document.getElementById("whanganui&PalmerstonNorthImg").src = "pictures/whanganui&PalmerstonNorth/X.JPG";
+            break;
+        
+        case "whanganui&PalmerstonNorthEssenButton":
+            document.getElementById("whanganui&PalmerstonNorthImg").src = "pictures/whanganui&PalmerstonNorth/X.JPG";
+            break;
+        
+            
+        
+        case "wellingtonInfoButton":
+            document.getElementById("wellingtonImg").src = "pictures/wellington/X.JPG";
+            break;
+            
+        case "wellingtonKlimaButton":
+            document.getElementById("wellingtonImg").src = "pictures/wellington/X.JPG";
+            break;
+            
+        case "wellingtonTodoButton":
+            document.getElementById("wellingtonImg").src = "pictures/wellington/X.JPG";
+            break;
+        
+        case "wellingtonEssenButton":
+            document.getElementById("wellingtonImg").src = "pictures/wellington/X.JPG";
+            break;
+        
+            
+        
+        case "marlborough&NelsonInfoButton":
+            document.getElementById("marlborough&NelsonImg").src = "pictures/marlborough&Nelson/X.JPG";
+            break;
+            
+        case "marlborough&NelsonKlimaButton":
+            document.getElementById("marlborough&NelsonImg").src = "pictures/marlborough&Nelson/X.JPG";
+            break;
+            
+        case "marlborough&NelsonTodoButton":
+            document.getElementById("marlborough&NelsonImg").src = "pictures/marlborough&Nelson/X.JPG";
+            break;
+        
+        case "marlborough&NelsonEssenButton":
+            document.getElementById("marlborough&NelsonImg").src = "pictures/marlborough&Nelson/X.JPG";
+            break;
+        
+            
+        
+        case "christchurch&CanterburyInfoButton":
+            document.getElementById("christchurch&CanterburyImg").src = "pictures/christchurch&Canterbury/X.JPG";
+            break;
+            
+        case "christchurch&CanterburyKlimaButton":
+            document.getElementById("christchurch&CanterburyImg").src = "pictures/christchurch&Canterbury/X.JPG";
+            break;
+            
+        case "christchurch&CanterburyTodoButton":
+            document.getElementById("christchurch&CanterburyImg").src = "pictures/christchurch&Canterbury/X.JPG";
+            break;
+        
+        case "christchurch&CanterburyEssenButton":
+            document.getElementById("christchurch&CanterburyImg").src = "pictures/christchurch&Canterbury/X.JPG";
+            break;
+        
+            
+        
+        case "otagoInfoButton":
+            document.getElementById("otagImg").src = "pictures/otag/X.JPG";
+            break;
+            
+        case "otagoKlimaButton":
+            document.getElementById("otagImg").src = "pictures/otag/X.JPG";
+            break;
+            
+        case "otagoTodoButton":
+            document.getElementById("otagImg").src = "pictures/otag/X.JPG";
+            break;
+        
+        case "otagoEssenButton":
+            document.getElementById("otagImg").src = "pictures/otag/X.JPG";
+            break;
+        
+            
+        
+        case "fjordland&SouthlandInfoButton":
+            document.getElementById("fjordland&SouthlandImg").src = "pictures/fjordland&Southland/X.JPG";
+            break;
+            
+        case "fjordland&SouthlandKlimaButton":
+            document.getElementById("fjordland&SouthlandImg").src = "pictures/fjordland&Southland/X.JPG";
+            break;
+            
+        case "fjordland&SouthlandTodoButton":
+            document.getElementById("fjordland&SouthlandImg").src = "pictures/fjordland&Southland/X.JPG";
+            break;
+        
+        case "fjordland&SouthlandEssenButton":
+            document.getElementById("fjordland&SouthlandImg").src = "pictures/fjordland&Southland/X.JPG";
+            break;
+        
+            
+        
+        case "queenstownInfoButton":
+            document.getElementById("queenstownImg").src = "pictures/queenstown/X.JPG";
+            break;
+            
+        case "queenstownKlimaButton":
+            document.getElementById("queenstownImg").src = "pictures/queenstown/X.JPG";
+            break;
+            
+        case "queenstownTodoButton":
+            document.getElementById("queenstownImg").src = "pictures/queenstown/X.JPG";
+            break;
+        
+        case "queenstownEssenButton":
+            document.getElementById("queenstownImg").src = "pictures/queenstown/X.JPG";
+            break;
+        
+            
+        
+        case "westCoastInfoButton":
+            document.getElementById("westCoastImg").src = "pictures/westCoast/X.JPG";
+            break;
+            
+        case "westCoastKlimaButton":
+            document.getElementById("westCoastImg").src = "pictures/westCoast/X.JPG";
+            break;
+            
+        case "westCoastTodoButton":
+            document.getElementById("westCoastImg").src = "pictures/westCoast/X.JPG";
+            break;
+        
+        case "westCoastEssenButton":
+            document.getElementById("westCoastImg").src = "pictures/westCoast/X.JPG";
+            break;
     }
 }
 
