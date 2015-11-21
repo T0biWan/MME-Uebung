@@ -6,12 +6,11 @@
 //    Autor: Tobias & Leon
 //=================================================================================================
 
-//Durch dieses Konstrukt wird sichergestellt das die Funktionen
+//Durch das folgende Konstrukt wird sichergestellt das die Funktionen
 //erst mit den Buttons verknüpft werden, wenn die Seite geladen ist.
 function init() {
-    buttonsInitialisieren();
+    funktionenInitialisieren();
 }
-
 window.addEventListener("load", init, false);
 
 
@@ -22,14 +21,18 @@ window.addEventListener("load", init, false);
 //
 //================================================================================================
 
-function buttonsInitialisieren() {
+function funktionenInitialisieren() {
     //Button zum Absenden des Formulars
     //Besser gesagt Initialisierung des Formulars, denn durch onsubmit wird auch ein Enter erkannt.
+    //Ist return false wird nichts gemacht, ist return true, wird gesendet.
     document.getElementById("formular").onsubmit = function (event) {
         return checkEingaben();
     }
     
+    
+    
     //Buttons zum ändern der Texte für die Regionen
+    //Wird ein Button geklickt, wird über paragraphAendern der jeweilige Text in p geändert.
     document.getElementById("aucklandInfoButton").onclick = function () {
         paragraphAendern("aucklandInfoButton");
     }
@@ -318,6 +321,7 @@ function buttonsInitialisieren() {
 }
 
 function paragraphAendern (button) {
+    //Über einen switch wird der Aufrufparameter ausgewertet und entsprechend auf ihn reagiert.
     switch (button) {
         case "aucklandInfoButton":
             document.getElementById("aucklandTextart").innerHTML = "Kurze Beschreibung:";
@@ -672,6 +676,8 @@ function paragraphAendern (button) {
 }
 
 function checkEingaben () {
+    //checkEingaben ruft für jedes input-Feld des Formulars die Methode checkEingabe auf
+    //Letztere gibt einen Boolean zurück. Aus Allen Booleans wird der Rückgabewert von checkEingaben()
     return checkEingabe(vorname, name, false) &&
         checkEingabe(nachname, name, true) && 
         checkEingabe(email, email, false) && 
@@ -694,11 +700,12 @@ function checkEingabe (inputName, inputTyp, required) {
     //Variablen deklarieren
     //Input zeigt auf die Texteingabe
     //Output zeigt auf das Warnlabel
+    //eingabeKorrekt ist der Rückgabewert
     var input;
     var output;
     var eingabeKorrekt = false;
     
-    //Variablen mit Aufrufparameter initialisieren
+    //Variablen abhängig Aufrufparameter initialisieren
     switch (inputName) {
         case vorname:
             input = document.newsFormular.vorname.value;
@@ -741,6 +748,10 @@ function checkEingabe (inputName, inputTyp, required) {
             break;
     }
     
+    //Eingabe testen
+    //Ist eine Eingabe, die required ist, leer wird eine Warnung ausgegeben.
+    //Ein Feld das nicht required und leer ist, wird nicht weiter geprüft.
+    //Hat ein Feld Inhalt wird über einen RegEx sein Inhalt geprüft.
     if (eingabeIstLeer(input)) {
         if (required) document.getElementById(output).innerHTML = "<-- Bitte ausfüllen";
         else eingabeKorrekt = true;
