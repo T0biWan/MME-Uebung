@@ -24,11 +24,10 @@ window.addEventListener("load", init, false);
 
 function buttonsInitialisieren() {
     //Button zum Absenden des Formulars
-    document.getElementById("absendenButton").onclick = function (event) {
-        if(!checkEingaben ()) event.preventDefault();
+    //Besser gesagt Initialisierung des Formulars, denn durch onsubmit wird auch ein Enter erkannt.
+    document.getElementById("formular").onsubmit = function (event) {
+        return checkEingaben();
     }
-
-    
     
     //Buttons zum ändern der Texte für die Regionen
     document.getElementById("aucklandInfoButton").onclick = function () {

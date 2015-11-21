@@ -1,5 +1,5 @@
 <!--================================================================================================
-    OnePage zu Neuseeland
+    OnePage zu einer Reiseroute durch Neuseeland
 
     Datei: index.html
     Datum: 02.11.2015
@@ -15,7 +15,7 @@
 	<head>
    		<meta charset="utf-8">
    		<title>Kia Ora</title>
-   		<meta id="description" content="to do">
+   		<meta id="description" content="Kia Ora - Deine Reise durch Neuseeland">
     	<link rel="stylesheet" href="css/merge.css">
     	<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
         <script src="js/funktionen.js"></script>
@@ -43,6 +43,10 @@
 =================================================================================================-->
         <main>
             <div class="regionen">
+<!--        Hier finden sich 16 div's, jedes enthält die Daten zu einer Region Neuseelands -->
+<!--        Jedes div hat eine id, diese entspricht dem Namen der Region, ein img, eine h2, eine h3 einen p mit Text -->
+<!--        und vier Buttons die den Text des p verändern. -->
+<!--        Nordinsel: -->
                 <div id="auckland">
                     <img src="pictures/DSC_0146.JPG">
                     <h2>Auckland</h2>
@@ -234,6 +238,7 @@
                     <button id="wellingtonEssenButton">Essen</button>
                 </div>
                 
+<!--        Südinsel: -->
                 <div id="marlborough&Nelson">
                     <img src="">
                     <h2>Marlborough & Nelson</h2>
@@ -346,12 +351,12 @@
                     <button id="westCoastEssenButton">Essen</button>
                 </div>
             </div>
+            
             <div id="formular">
+<!--        Das folgende ist ein Formular, welches die Nutzereingaben per RegEx prüft. -->
+<!--        Sind sie zulässig werden sie per submit (Enter oder Button click) weitergeleitet.-->
                 <form class="newsFormular" action="http://www.formular-chef.de/fc.cgi" name="newsFormular">
-<!--
-                    Ich habe das Attribut type von input entfernt da es meine Abfrage
-                    per RegEx gestört hat.
--->
+<!--                Ich habe das Attribut type von allen inputs entfernt da es meine Abfrage per RegEx gestört hat. -->
                     <div>
                         <label for="vorname">Vorname:</label>
                         <input id="vorname" name="vorname">
