@@ -1,0 +1,62 @@
+/*====================================================================================================
+    Styles
+    Styles für die Regionen Neuseelands
+    
+    Datei: regionen.css
+    Datum: 08.11.2015
+    Autor: Tobias & Leon
+====================================================================================================*/
+
+@media screen {
+
+	html, body {
+        margin: 0;
+        padding: 0;
+        min-height: 100%;
+        width: 100%;
+        font-family: 'Open Sans', sans-serif;
+        color: rgb(229, 170, 20);
+        position: relative;
+    }
+
+    main {
+    	width: 100%;
+    	height: 100%;
+    }
+
+    #startpage {
+    	width: 100%;
+    	height: 100vh;
+    }
+
+
+    .regionen {
+    	width: 100%;
+    	height: 100%;
+        background-color: rgb(32, 44, 36);
+    }
+
+    .region {
+    	width: 100%;
+    	height: 100vh;
+    	padding-top: 5%;
+    }
+
+    #karte{
+        padding-top: 0;
+        max-width: 20%;
+        margin-top: 20%;
+        margin-left: 72%;
+        position: absolute;
+    }
+
+
+
+
+} /* Ende @media - nicht löschen */
+
+/*====================================================================================================
+
+    E N D E
+
+====================================================================================================*/

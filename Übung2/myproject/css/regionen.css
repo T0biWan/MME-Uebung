@@ -8,23 +8,40 @@
 ====================================================================================================*/	
 
 @media screen {
-    
-    div.regionen img {
-        width: 35%;
+
+    h2{
+        margin: 0;
+        font-weight: 300;
+        font-size: 400%;
+        text-align: center;
+    }
+    h3{
+        clear: both;
+        margin-top: 3%;
         padding-left: 2%;
+        font-weight: 400;
+        font-size: 175%;
+    }
+
+    p{
+        font-weight: 300;
     }
         /*position: fixed;*/
-    
-    div.regionen h2{
-        margin-left: 1%;
-        
-    }
     
     div.regionen p {
         width: 60%;
         padding-right: 2%;
         padding-left: 1%;
     }
+
+    .regionen img {
+        /*!... Karte: siehe styles.css ...!*/
+    margin-top: 4%;
+        padding-left: 4%;
+        float: left;
+        width: 35%;
+    }
+
     
 
 } /* Ende @media - nicht löschen */
