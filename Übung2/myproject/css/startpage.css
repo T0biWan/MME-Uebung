@@ -9,9 +9,30 @@
 
 @media screen {
 
-    #startpage {
+    .startpage{
+       background-color: rgb (20, 20, 20);
+       background-size: cover;
         background-image: url(../pictures/landscape01.jpg);
-    	background-size: cover; 
+    }
+
+    #slice1{
+        background-image: url(../pictures/landscape01.jpg);
+        background-size: cover; 
+    }
+      #slice2{
+        background-image: url(../pictures/landscape02.jpg);
+    }
+      #slice3{
+        background-image: url(../pictures/landscape03.jpg);
+    }
+    #slice4{
+        background-image: url(../pictures/landscape04.jpg);
+    }
+    #slice5{
+        background-image: url(../pictures/landscape05.jpg);
+    }
+    #slice6{
+        background-image: url(../pictures/landscape06.jpg);
     }
 
     #logo{

@@ -16,15 +16,18 @@
         text-align: center;
     }
     h3{
-        clear: both;
-        margin-top: 3%;
-        padding-left: 2%;
+        padding-top: 15%;
+        margin-left: 41%;
         font-weight: 400;
         font-size: 175%;
     }
 
     p{
+        padding-top: 4%;
+        margin-left: 3%;
+        font-size: 110%;
         font-weight: 300;
+        clear: both;
     }
         /*position: fixed;*/
     
@@ -36,12 +39,27 @@
 
     .regionen img {
         /*!... Karte: siehe styles.css ...!*/
-    margin-top: 4%;
+        margin-top: 4%;
         padding-left: 4%;
         float: left;
         width: 35%;
     }
 
+    .regionen .contentbutton{
+        width: 5%;
+        padding-top: 5%;
+        padding-left: 2%;
+    }
+    .regionen .contentbutton:hover{
+        width: 6%;
+        padding-top: 5%;
+        padding-left: 2%;
+    }
+
+    button:hover{
+        background-color: rgb(235, 195, 59);
+        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    }
     
 
 } /* Ende @media - nicht löschen */
