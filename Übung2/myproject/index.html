@@ -18,7 +18,7 @@
    		<meta id="description" content="to do">
     	<link rel="stylesheet" href="css/merge.css">
     	<link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-        <script src="js/funktionen.js"></script>
+        
 	</head>
     
     
@@ -45,9 +45,21 @@
 
             <div class="startpage">
                 
-                <img id="logo" src="pictures/KiaOra_big.png">
+               <div id="Slideshow">
+                     <div class="slice" id="slice1"></div>
+                     <div class="slice" id="slice2"></div>
+                     <div class"slice" id="slice3"></div>
+                     <div class"slice" id="slice4"></div>
+                     <div class"slice" id="slice5"></div>
+                     <div class"slice" id="slice6"></div>
+                 </div>
+
+                <div id="drueber"> 
+                 <img id="logo" src="pictures/KiaOra_big.png">
                 
-                <a href="#auckland"> <img id="startpfeil" src="pictures/arrow_down.png"> </a>
+                 <a href="#auckland"> <img id="startpfeil" src="pictures/arrow_down.png"> </a>
+                </div>
+
 
             </div>
 
@@ -63,7 +75,7 @@
 
                     <h2>Auckland</h2>
 
-                    <img src="pictures/auckland.JPG">
+                    <img id="aucklandImg" src="pictures/auckland.JPG">
 
                     <img id= "aucklandInfoButton" class="contentbutton" src="pictures/fav.png">
                     <img id= "aucklandKlimaButton" class="contentbutton" src="pictures/wetter.png">
@@ -93,7 +105,7 @@
 
                     <h2>Northland</h2>
 
-                    <img src="pictures/auckland.JPG">
+                    <img id="northlandImg" src="pictures/northland/DSCN1252.JPG">
 
                     <img id= "northlandInfoButton" class="contentbutton" src="pictures/fav.png">
                     <img id= "northlandKlimaButton" class="contentbutton" src="pictures/wetter.png">
@@ -117,7 +129,7 @@
 
                     <h2>Coromandel Peninsula</h2>
 
-                    <img src="pictures/auckland.JPG">
+                    <img id="coromandePeninsulalImg" src="pictures/auckland.JPG">
 
                     <img id= "aucklandInfoButton" class="contentbutton" src="pictures/fav.png">
                     <img id= "aucklandKlimaButton" class="contentbutton" src="pictures/wetter.png">
@@ -134,10 +146,10 @@
                         rauer Eigenwilligkeit verfolgt einen auf Schritt und Tritt.
                     </p>
 
-                    <!--<button id="coromandelPeninsulaInfoButton">Info</button>
+                    <button id="coromandelPeninsulaInfoButton">Info</button>
                     <button id="coromandelPeninsulaKlimaButton">Klima</button>
                     <button id="coromandelPeninsulaTodoButton">To do's</button>
-                    <button id="coromandelPeninsulaEssenButton">Essen</button>  -->
+                    <button id="coromandelPeninsulaEssenButton">Essen</button>
                 </div>
 
                 <div class="region" id="waikato&KingCountry">
@@ -463,7 +475,7 @@
                     <div class="formzeile">
                         <label for="land">Land*:</label>
                         <input id="land" name="land" placeholder="Bitte dsd Land eintragen">
-                        <label for="land" class="warnung" id="landWarnung"></label>
+                        <label for="land" id="landWarnung"></label>
                     </div>
                     
                     <!--
@@ -490,7 +502,7 @@
         <footer>
         </footer>
         
-        
+        <script src="js/funktionen.js"></script>
         
     </body>
        

@@ -9,30 +9,53 @@
 
 @media screen {
 
-    .startpage{
+    /*.startpage{
        background-color: rgb (20, 20, 20);
        background-size: cover;
         background-image: url(../pictures/landscape01.jpg);
+    }*/
+    #drueber{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 100vh;
+    }
+
+    #Slideshow{
+        height: 100vh;
     }
 
     #slice1{
         background-image: url(../pictures/landscape01.jpg);
         background-size: cover; 
+        height: 100vh;
     }
-      #slice2{
+    #slice2{
         background-image: url(../pictures/landscape02.jpg);
+        background-size: cover; 
+        height: 100vh;
     }
-      #slice3{
+    #slice3{
         background-image: url(../pictures/landscape03.jpg);
+        background-size: cover; 
+        height: 100vh;
     }
     #slice4{
         background-image: url(../pictures/landscape04.jpg);
+        background-size: cover; 
+        height: 100vh;
     }
     #slice5{
         background-image: url(../pictures/landscape05.jpg);
+        background-size: cover; 
+        height: 100vh;
     }
+
     #slice6{
         background-image: url(../pictures/landscape06.jpg);
+        background-size: cover; 
+        height: 100vh;
     }
 
     #logo{

@@ -982,6 +982,69 @@ function checkEingaben () {
         checkEingabe(land, name, true);
 }
 
+//================================================================================================
+//
+//  Slider
+//
+//================================================================================================
+    var dauer = 300; /* fade dauer */
+    var unsichtbar = 400; /* unsichtbar dauer */
+    var anzeige = 3200; /* Anzeigedauer */
+
+    var aktuellesBild = 0;
+
+    var element = document.getElementById("Slideshow");
+
+    var fArray = element.getElementsByTagName('div');
+    var laenge = fArray.length;
+
+    StartFade();
+    function StartFade()
+    { 
+        aktuellesBild = 1;
+        setTimeout("FadeOut()", anzeige);
+    }
+
+    function FadeOut()
+    {
+        for (i = 0; i <= 1; i += 0.01)
+        {
+            setTimeout("SetOpa(" + (1 - i) +")", i * dauer);
+        }
+          setTimeout("FadeIn()", (dauer + unsichtbar));
+    }
+
+    function FadeIn()
+    {
+        for (i = 0; i <= 1; i += 0.01)
+        {
+            setTimeout("SetOpa(" + i +")", i * dauer);
+        }
+        if (aktuellesBild == laenge)
+        {
+            aktuellesBild = 1
+            document.getElementById("slice" + aktuellesBild).style.display = "flex";
+            document.getElementById("slice" + laenge).style.display = "none";
+        }
+        else
+        {
+            document.getElementById("slice" + (aktuellesBild + 1)).style.display = "flex";
+            document.getElementById("slice" + aktuellesBild).style.display = "none";
+            aktuellesBild = aktuellesBild+1
+        }
+        setTimeout("FadeOut()", (dauer + anzeige));
+    }
+    function SetOpa(deckkraft)
+    {
+        element.style.opacity = deckkraft;
+        element.style.MozOpacity = deckkraft;
+        element.style.KhtmlOpacity = deckkraft;
+        element.style.WebkitOpacity = deckkraft;
+        element.style.KhtmlOpacity = deckkraft;
+        element.style.MsOpacity = deckkraft;
+        element.style.filter = 'alpha(opacity=' + (deckkraft * 100) + ');';
+    }
+
 
 
 //================================================================================================
