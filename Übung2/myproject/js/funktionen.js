@@ -6,6 +6,31 @@
 //    Autor: Tobias & Leon
 //=================================================================================================
 
+
+
+//================================================================================================
+//
+//  Attribute
+//
+//================================================================================================
+
+var vornameOk = false;
+var nachnameOk = false;
+var emailOk = false;
+var telOk = false;
+var strasseOk = false;
+var plzOk = false;
+var stadtOk = false;
+var landOk = false;
+
+
+
+//================================================================================================
+//
+//  Initialisierung
+//
+//================================================================================================
+
 //Durch das folgende Konstrukt wird sichergestellt das die Funktionen
 //erst mit den Buttons verknüpft werden, wenn die Seite geladen ist.
 function init() {
@@ -22,12 +47,14 @@ window.addEventListener("load", init, false);
 //================================================================================================
 
 function funktionenInitialisieren() {
-    //Button zum Absenden des Formulars
     //Besser gesagt Initialisierung des Formulars, denn durch onsubmit wird auch ein Enter erkannt.
-    //Ist return false wird nichts gemacht, ist return true, wird gesendet.
     document.getElementById("formular").onsubmit = function (event) {
-        return checkEingaben();
+        return darfSenden();
     }
+    
+    document.getElementById("formular").onkeyup = function (event) {
+        checkEingaben();
+    } 
     
     
     
@@ -972,78 +999,19 @@ function bildAendern(button) {
 function checkEingaben () {
     //checkEingaben ruft für jedes input-Feld des Formulars die Methode checkEingabe auf
     //Letztere gibt einen Boolean zurück. Aus Allen Booleans wird der Rückgabewert von checkEingaben()
-    return checkEingabe(vorname, name, false) &&
-        checkEingabe(nachname, name, true) && 
-        checkEingabe(email, email, false) && 
-        checkEingabe(tel, tel, false) && 
-        checkEingabe(strasse, strasse, true) && 
-        checkEingabe(plz, plz, true) && 
-        checkEingabe(stadt, name, true) && 
-        checkEingabe(land, name, true);
+    checkEingabe(vorname, name, false);
+    checkEingabe(nachname, name, true); 
+    checkEingabe(email, email, false); 
+    checkEingabe(tel, tel, false); 
+    checkEingabe(strasse, strasse, true); 
+    checkEingabe(plz, plz, true);
+    checkEingabe(stadt, name, true);
+    checkEingabe(land, name, true);
 }
 
-//================================================================================================
-//
-//  Slider
-//
-//================================================================================================
-    var dauer = 300; /* fade dauer */
-    var unsichtbar = 400; /* unsichtbar dauer */
-    var anzeige = 3200; /* Anzeigedauer */
-
-    var aktuellesBild = 0;
-
-    var element = document.getElementById("Slideshow");
-
-    var fArray = element.getElementsByTagName('div');
-    var laenge = fArray.length;
-
-    StartFade();
-    function StartFade()
-    { 
-        aktuellesBild = 1;
-        setTimeout("FadeOut()", anzeige);
-    }
-
-    function FadeOut()
-    {
-        for (i = 0; i <= 1; i += 0.01)
-        {
-            setTimeout("SetOpa(" + (1 - i) +")", i * dauer);
-        }
-          setTimeout("FadeIn()", (dauer + unsichtbar));
-    }
-
-    function FadeIn()
-    {
-        for (i = 0; i <= 1; i += 0.01)
-        {
-            setTimeout("SetOpa(" + i +")", i * dauer);
-        }
-        if (aktuellesBild == laenge)
-        {
-            aktuellesBild = 1
-            document.getElementById("slice" + aktuellesBild).style.display = "flex";
-            document.getElementById("slice" + laenge).style.display = "none";
-        }
-        else
-        {
-            document.getElementById("slice" + (aktuellesBild + 1)).style.display = "flex";
-            document.getElementById("slice" + aktuellesBild).style.display = "none";
-            aktuellesBild = aktuellesBild+1
-        }
-        setTimeout("FadeOut()", (dauer + anzeige));
-    }
-    function SetOpa(deckkraft)
-    {
-        element.style.opacity = deckkraft;
-        element.style.MozOpacity = deckkraft;
-        element.style.KhtmlOpacity = deckkraft;
-        element.style.WebkitOpacity = deckkraft;
-        element.style.KhtmlOpacity = deckkraft;
-        element.style.MsOpacity = deckkraft;
-        element.style.filter = 'alpha(opacity=' + (deckkraft * 100) + ');';
-    }
+function darfSenden() {
+    return vornameOk && nachnameOk && emailOk && telOk && strasseOk && plzOk && stadtOk && landOk;
+}
 
 
 
@@ -1121,6 +1089,40 @@ function checkEingabe (inputName, inputTyp, required) {
         eingabeKorrekt = true;
     }
     
+    switch (inputName) {
+        case vorname:
+            vornameOk = eingabeKorrekt;
+            break;
+            
+        case nachname:
+            nachnameOk = eingabeKorrekt;
+            break;
+            
+        case email:
+            emailOk = eingabeKorrekt;
+            break;
+            
+        case tel:
+            telOk = eingabeKorrekt;
+            break;
+            
+        case strasse:
+            strasseOk = eingabeKorrekt;
+            break;
+            
+        case plz:
+            plzOk = eingabeKorrekt;
+            break;
+            
+        case stadt:
+            stadtOk = eingabeKorrekt;
+            break;
+            
+        case land:
+            landOk = eingabeKorrekt;
+            break;
+    }
+    
     return eingabeKorrekt;
 }
 
@@ -1157,6 +1159,74 @@ function falschesFormat (input, output, inputTyp) {
     }
     return (!regEx.test(input));
 }
+
+
+
+//================================================================================================
+//
+//  Slider
+//
+//================================================================================================
+
+    var dauer = 300; /* fade dauer */
+    var unsichtbar = 400; /* unsichtbar dauer */
+    var anzeige = 3200; /* Anzeigedauer */
+
+    var aktuellesBild = 0;
+
+    var element = document.getElementById("Slideshow");
+
+    var fArray = element.getElementsByTagName('div');
+    var laenge = fArray.length;
+
+    StartFade();
+    function StartFade()
+    { 
+        aktuellesBild = 1;
+        setTimeout("FadeOut()", anzeige);
+    }
+
+    function FadeOut()
+    {
+        for (i = 0; i <= 1; i += 0.01)
+        {
+            setTimeout("SetOpa(" + (1 - i) +")", i * dauer);
+        }
+          setTimeout("FadeIn()", (dauer + unsichtbar));
+    }
+
+    function FadeIn()
+    {
+        for (i = 0; i <= 1; i += 0.01)
+        {
+            setTimeout("SetOpa(" + i +")", i * dauer);
+        }
+        if (aktuellesBild == laenge)
+        {
+            aktuellesBild = 1
+            document.getElementById("slice" + aktuellesBild).style.display = "flex";
+            document.getElementById("slice" + laenge).style.display = "none";
+        }
+        else
+        {
+            document.getElementById("slice" + (aktuellesBild + 1)).style.display = "flex";
+            document.getElementById("slice" + aktuellesBild).style.display = "none";
+            aktuellesBild = aktuellesBild+1
+        }
+        setTimeout("FadeOut()", (dauer + anzeige));
+    }
+    function SetOpa(deckkraft)
+    {
+        element.style.opacity = deckkraft;
+        element.style.MozOpacity = deckkraft;
+        element.style.KhtmlOpacity = deckkraft;
+        element.style.WebkitOpacity = deckkraft;
+        element.style.KhtmlOpacity = deckkraft;
+        element.style.MsOpacity = deckkraft;
+        element.style.filter = 'alpha(opacity=' + (deckkraft * 100) + ');';
+    }
+
+
 
 //=================================================================================================
 //  
