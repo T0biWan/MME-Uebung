@@ -1072,6 +1072,7 @@ function falschesFormat (input, output, inputTyp) {
     var regEx;
     switch (inputTyp) {
         case name:
+            //NIMMT KEINE UMLAUTE!
             regEx = /^(([A-Z]?[a-z]{0,20})(( |-|_| - | _ )([A-Z]?[a-z]{0,20}))?)$/;
             break;
         
