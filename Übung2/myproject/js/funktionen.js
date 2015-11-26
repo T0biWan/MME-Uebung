@@ -52,9 +52,37 @@ function funktionenInitialisieren() {
         return darfSenden();
     }
     
-    document.getElementById("formular").onkeyup = function (event) {
-        checkEingaben();
-    } 
+    document.getElementById("vorname").onkeyup = function (event) {
+        checkEingabe(vorname, name, false);
+    }
+    
+    document.getElementById("nachname").onkeyup = function (event) {
+        checkEingabe(nachname, name, true);
+    }
+    
+    document.getElementById("email").onkeyup = function (event) {
+        checkEingabe(email, name, false);
+    }
+    
+    document.getElementById("tel").onkeyup = function (event) {
+        checkEingabe(tel, name, false);
+    }
+    
+    document.getElementById("strasse").onkeyup = function (event) {
+        checkEingabe(strasse, name, true);
+    }
+    
+    document.getElementById("plz").onkeyup = function (event) {
+        checkEingabe(plz, name, true);
+    }
+    
+    document.getElementById("stadt").onkeyup = function (event) {
+        checkEingabe(stadt, name, true);
+    }
+    
+    document.getElementById("land").onkeyup = function (event) {
+        checkEingabe(land, name, true);
+    }
     
     
     
