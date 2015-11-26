@@ -14,6 +14,11 @@
 //
 //================================================================================================
 
+// Diese Variablen beeinflussen das Submit verhalten des Formulars.
+// Die freiwilligen Felder werden mit true initialisiert.
+// Werden sie falsch ausefüllt, werden sie auf false gesetzt.
+// Jede Eingabe wird per RegEx auf ihre Richtigkeit geprüft. Entsprechend wird der boolean Wert,
+// der zugehörigen Variable verändert.
 var vornameOk = true;
 var nachnameOk = false;
 var emailOk = true;
@@ -47,65 +52,68 @@ window.addEventListener("load", init, false);
 //================================================================================================
 
 function funktionenInitialisieren() {
-    //Besser gesagt Initialisierung des Formulars, denn durch onsubmit wird auch ein Enter erkannt.
+    // Initialisierung des Formulars, denn durch onsubmit wird auch ein Enter erkannt.
+    // Erst wenn alle Variablen auf true gesetzt wurden kann gesendet werden.
     document.getElementById("formular").onsubmit = function (event) {
         return darfSenden();
     }
     
     
     
+    // Die folgenden Funktionen prüfen bei Eingabe das input-Feld.
+    // Bei falscher eingabe wird das Feld rot markiert.
     document.getElementById("vorname").onkeyup = function (event) {
         checkEingabe(vorname, name, false);
-        if(vornameOk) document.getElementById("vorname").style.borderColor = 'blue';
-        else document.getElementById("vorname").style.borderColor = 'red';
+        if(!vornameOk) document.getElementById("vorname").style.borderColor = 'red';
+        //else document.getElementById("vorname").style.borderColor = default;
     }
     
     document.getElementById("nachname").onkeyup = function (event) {
         checkEingabe(nachname, name, true);
-        if(nachnameOk) document.getElementById("nachname").style.borderColor = 'blue';
+        if(!nachnameOk) document.getElementById("nachname").style.borderColor = 'red';
         else document.getElementById("nachname").style.borderColor = 'red';
     }
     
     document.getElementById("email").onkeyup = function (event) {
         checkEingabe(email, email, false);
-        if(emailOk) document.getElementById("email").style.borderColor = 'blue';
+        if(!emailOk) document.getElementById("email").style.borderColor = 'red';
         else document.getElementById("email").style.borderColor = 'red';
     }
     
     document.getElementById("tel").onkeyup = function (event) {
         checkEingabe(tel, tel, false);
-        if(telOk) document.getElementById("tel").style.borderColor = 'blue';
+        if(!telOk) document.getElementById("tel").style.borderColor = 'red';
         else document.getElementById("tel").style.borderColor = 'red';
     }
     
     document.getElementById("strasse").onkeyup = function (event) {
         checkEingabe(strasse, strasse, true);
-        if(strasseOk) document.getElementById("strasse").style.borderColor = 'blue';
+        if(!strasseOk) document.getElementById("strasse").style.borderColor = 'red';
         else document.getElementById("strasse").style.borderColor = 'red';
     }
     
     document.getElementById("plz").onkeyup = function (event) {
         checkEingabe(plz, plz, true);
-        if(plzOk) document.getElementById("plz").style.borderColor = 'blue';
+        if(!plzOk) document.getElementById("plz").style.borderColor = 'red';
         else document.getElementById("plz").style.borderColor = 'red';
     }
     
     document.getElementById("stadt").onkeyup = function (event) {
         checkEingabe(stadt, name, true);
-        if(stadtOk) document.getElementById("stadt").style.borderColor = 'blue';
+        if(!stadtOk) document.getElementById("stadt").style.borderColor = 'red';
         else document.getElementById("stadt").style.borderColor = 'red';
     }
     
     document.getElementById("land").onkeyup = function (event) {
         checkEingabe(land, name, true);
-        if(landOk) document.getElementById("land").style.borderColor = 'blue';
+        if(!landOk) document.getElementById("land").style.borderColor = 'red';
         else document.getElementById("land").style.borderColor = 'red';
     }
     
     
     
-    //Buttons zum ändern der Texte für die Regionen
-    //Wird ein Button geklickt, wird über paragraphAendern der jeweilige Text in p geändert.
+    // Buttons zum ändern der Texte für die Regionen
+    // Wird ein Button geklickt, wird über paragraphAendern der jeweilige Text in p geändert.
     document.getElementById("aucklandInfoButton").onclick = function () {
         paragraphAendern("aucklandInfoButton");
         bildAendern("aucklandInfoButton");
@@ -1111,16 +1119,17 @@ function checkEingabe (inputName, inputTyp, required) {
     //Ein Feld das nicht required und leer ist, wird nicht weiter geprüft.
     //Hat ein Feld Inhalt wird über einen RegEx sein Inhalt geprüft.
     if (eingabeIstLeer(input)) {
-        if (required) document.getElementById(output).innerHTML = "<-- Bitte ausfüllen";
+        //if (required) document.getElementById(output).innerHTML = "<-- Bitte ausfüllen";
+        if (required) eingabeKorrekt = false;
         else eingabeKorrekt = true;
     }
     
-    else if (falschesFormat (input, output, inputTyp)) document.getElementById(output).innerHTML = "<-- Falsches Format";
+    //else if (falschesFormat (input, output, inputTyp)) document.getElementById(output).innerHTML = "<-- Falsches Format";
+    else if (falschesFormat (input, output, inputTyp)) eingabeKorrekt = false;
     
-    else {
-        document.getElementById(output).innerHTML = "";
-        eingabeKorrekt = true;
-    }
+    //else document.getElementById(output).innerHTML = "";
+    else eingabeKorrekt = true;
+    
     
     switch (inputName) {
         case vorname:
