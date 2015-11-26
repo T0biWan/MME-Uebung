@@ -71,37 +71,37 @@ function funktionenInitialisieren() {
     document.getElementById("nachname").onkeyup = function (event) {
         checkEingabe(nachname, name, true);
         if(!nachnameOk) document.getElementById("nachname").style.borderColor = 'red';
-        else document.getElementById("nachname").style.borderColor = 'red';
+        else document.getElementById("nachname").style.borderColor = 'white';
     }
     
     document.getElementById("email").onkeyup = function (event) {
         checkEingabe(email, email, false);
         if(!emailOk) document.getElementById("email").style.borderColor = 'red';
-        else document.getElementById("email").style.borderColor = 'red';
+        else document.getElementById("email").style.borderColor = 'white';
     }
     
     document.getElementById("tel").onkeyup = function (event) {
         checkEingabe(tel, tel, false);
         if(!telOk) document.getElementById("tel").style.borderColor = 'red';
-        else document.getElementById("tel").style.borderColor = 'red';
+        else document.getElementById("tel").style.borderColor = 'white';
     }
     
     document.getElementById("strasse").onkeyup = function (event) {
         checkEingabe(strasse, strasse, true);
         if(!strasseOk) document.getElementById("strasse").style.borderColor = 'red';
-        else document.getElementById("strasse").style.borderColor = 'red';
+        else document.getElementById("strasse").style.borderColor = 'white';
     }
     
     document.getElementById("plz").onkeyup = function (event) {
         checkEingabe(plz, plz, true);
         if(!plzOk) document.getElementById("plz").style.borderColor = 'red';
-        else document.getElementById("plz").style.borderColor = 'red';
+        else document.getElementById("plz").style.borderColor = 'white';
     }
     
     document.getElementById("stadt").onkeyup = function (event) {
         checkEingabe(stadt, name, true);
         if(!stadtOk) document.getElementById("stadt").style.borderColor = 'red';
-        else document.getElementById("stadt").style.borderColor = 'red';
+        else document.getElementById("stadt").style.borderColor = 'white';
     }
     
     document.getElementById("land").onkeyup = function (event) {
@@ -1179,7 +1179,7 @@ function falschesFormat (input, output, inputTyp) {
     var regEx;
     switch (inputTyp) {
         case name:
-            regEx = /^(([A-Z]?[a-z]{0,20})(( |-|_| - | _ )([A-Z]?[a-z]{0,20}))?)$/;
+            regEx = /^(([A-ZÄÖÜ]?[a-zäöüß]{0,20})(( |-|_| - | _ |\. )([A-Z]?[a-z]{0,20}))?)$/;
             break;
         
         case email:
