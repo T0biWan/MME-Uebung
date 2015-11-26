@@ -1,5 +1,5 @@
 <!--================================================================================================
-    OnePage zu einer Reiseroute durch Neuseeland
+    OnePage zu Neuseeland
 
     Datei: index.html
     Datum: 02.11.2015
@@ -14,11 +14,11 @@
 =================================================================================================-->
 	<head>
    		<meta charset="utf-8">
-   		<title>Kia Ora</title>
-   		<meta id="description" content="Kia Ora - Deine Reise durch Neuseeland">
+   		<title>Kia Ora!</title>
+   		<meta id="description" content="to do">
     	<link rel="stylesheet" href="css/merge.css">
-    	<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-        <script src="js/funktionen.js"></script>
+    	<link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+        
 	</head>
     
     
@@ -42,15 +42,53 @@
     Main  
 =================================================================================================-->
         <main>
+
+            <div class="startpage">
+                
+               <div id="Slideshow">
+                     <div class="slice" id="slice1"></div>
+                     <div class="slice" id="slice2"></div>
+                     <div class"slice" id="slice3"></div>
+                     <div class"slice" id="slice4"></div>
+                     <div class"slice" id="slice5"></div>
+                     <div class"slice" id="slice6"></div>
+                 </div>
+
+                <div id="drueber"> 
+                 <img id="logo" src="pictures/KiaOra_big.png">
+                
+                 <a href="#auckland"> <img id="startpfeil" src="pictures/arrow_down.png"> </a>
+                </div>
+
+
+            </div>
+
             <div class="regionen">
-<!--        Hier finden sich 16 div's, jedes enthält die Daten zu einer Region Neuseelands -->
-<!--        Jedes div hat eine id, diese entspricht dem Namen der Region, ein img, eine h2, eine h3 einen p mit Text -->
-<!--        und vier Buttons die den Text des p verändern. -->
-<!--        Nordinsel: -->
-                <div id="auckland">
-                    <img id="aucklandImg" src="pictures/auckland/DSC_0146.JPG">
+
+                
+                <a href="#newsformular"></a>
+
+
+                <div class="region" id="auckland">
+
+                    <img id="karte" src="pictures/karte_auckland.png">
+
                     <h2>Auckland</h2>
+
+                    <img id="aucklandImg" src="pictures/auckland.JPG">
+
+                    <img id= "aucklandInfoButton" class="contentbutton" src="pictures/fav.png">
+                    <img id= "aucklandKlimaButton" class="contentbutton" src="pictures/wetter.png">
+                    <img id= "aucklandTodoButton" class="contentbutton" src="pictures/todo.png">
+                    <img id= "aucklandEssenButton" class="contentbutton" src="pictures/essen.png">
+                   <!-- <button id="aucklandInfoButton">Info</button> 
+                    <button id="aucklandKlimaButton">Klima</button>
+                    <button id="aucklandTodoButton">To do's</button>
+                    <button id="aucklandEssenButton">Essen</button>
+                    -->
+
                     <h3 id="aucklandTextart">Kurze Beschreibung:</h3>
+
                     <p id="aucklandParagraph">
                         Paris ist die Stadt der Liebe aber Auckland die Stadt der liebenden. Das zumindest bedeutet ihr Maori-Name Tamaki Makaurau.
                         Zwei Häfen umrahmen eine Landenge mit Vulkankegeln und fruchtbarem Ackerland. An jedem der vielen Aussichtspunkte wird man verblüfft feststellen,
@@ -58,14 +96,22 @@
                         Die 135.000 Schiffchen, die in den Jachthäfen liegen, haben der Stadt ihren beständigsten Spitznamen verliehen: Stadt der Segel.
                         Dichte Regenwälder Thermalquellen, menschenleere Strände, Weingüter und Naturschutzgebiete liegen nie mehr als eine Autostunde von den Hochhäusern der Innenstadt entfernt.
                     </p>
-                    <button id="aucklandInfoButton">Info</button>
-                    <button id="aucklandKlimaButton">Klima</button>
-                    <button id="aucklandTodoButton">To do's</button>
-                    <button id="aucklandEssenButton">Essen</button>
+
                 </div>
-                <div id="northland">
-                    <img id="northlandImg" src="pictures/northland/DSCN1252.JPG">
+
+                <div class="region" id="northland">
+
+                    <img id="karte" src="pictures/karte_northland.png">
+
                     <h2>Northland</h2>
+
+                    <img id="northlandImg" src="pictures/northland/DSCN1252.JPG">
+
+                    <img id= "northlandInfoButton" class="contentbutton" src="pictures/fav.png">
+                    <img id= "northlandKlimaButton" class="contentbutton" src="pictures/wetter.png">
+                    <img id= "northlandTodoButton" class="contentbutton" src="pictures/todo.png">
+                    <img id= "northlandEssenButton" class="contentbutton" src="pictures/essen.png">
+
                     <h3 id="northlandTextart">Kurze Beschreibung:</h3>
                     <p id="northlandParagraph">
                         Bei vielen Kiwis beschwört der Ausdruck "im Norden" sepiafarbene Erinnerungsbilder von Familienurlaub in der Sonne, blühende Pohutukawas und spielenden Delfinen herauf.
@@ -73,14 +119,23 @@
                         rosa, weißen oder pfirsich-farbenem Sand. Neben Restbeständen der großen Kauriwälder wartet Northland auch mit Geschichte auf. Das Land wurde von Norden nach Süden durch die einwandernden Polynesier
                         kolonialisiert.
                     </p>
-                    <button id="northlandInfoButton">Info</button>
+                   <!-- <button id="northlandInfoButton">Info</button>
                     <button id="northlandKlimaButton">Klima</button>
                     <button id="northlandTodoButton">To do's</button>
-                    <button id="northlandEssenButton">Essen</button>
+                    <button id="northlandEssenButton">Essen</button> -->
                 </div>
-                <div id="coromandelPeninsula">
-                    <img id="coromandelPeninsulaImg" src="pictures/coromandelPeninsula/P1160313.JPG">
+
+                <div class="region" id="coromandelPeninsula">
+
                     <h2>Coromandel Peninsula</h2>
+
+                    <img id="coromandePeninsulalImg" src="pictures/auckland.JPG">
+
+                    <img id= "aucklandInfoButton" class="contentbutton" src="pictures/fav.png">
+                    <img id= "aucklandKlimaButton" class="contentbutton" src="pictures/wetter.png">
+                    <img id= "aucklandTodoButton" class="contentbutton" src="pictures/todo.png">
+                    <img id= "aucklandEssenButton" class="contentbutton" src="pictures/essen.png">
+
                     <h3 id="coromandelPeninsulaTextart">Kurze Beschreibung:</h3>
                     <p id="coromandelPeninsulaParagraph">
                         Östlich von Auckland wagt sie sich kühn in den Pazifikhinaus. Ein dramatisch in die Höhe ragender Bergrücken teilt die Halbinsel in zwei sehr ungleiche Hälften.
@@ -90,14 +145,16 @@
                         Trotz der Nähe zu Auckland ist man in der Region schnell und einfach in herrlicher Abgeschiedenheit. Einige der abgelegenen  Gemeinden erreicht man immer noch nur über Schotterpisten und die Aura
                         rauer Eigenwilligkeit verfolgt einen auf Schritt und Tritt.
                     </p>
+
                     <button id="coromandelPeninsulaInfoButton">Info</button>
                     <button id="coromandelPeninsulaKlimaButton">Klima</button>
                     <button id="coromandelPeninsulaTodoButton">To do's</button>
                     <button id="coromandelPeninsulaEssenButton">Essen</button>
                 </div>
-                <div id="waikato&KingCountry">
-                    <img id="waikato&KingCountryImg" src="">
+
+                <div class="region" id="waikato&KingCountry">
                     <h2>Waikato & King Country</h2>
+                    <img src="pictures/auckland.JPG">
                     <h3 id="waikato&KingCountryTextart">Kurze Beschreibung:</h3>
                     <p id="waikato&KingCountryParagraph">
                         Sattgrüne Felder und sanft geschwungene Hügel bestimmen das Landschaftsbild um Neuseelands mächtigsten Strom, den Waikato.
@@ -118,9 +175,10 @@
                     <button id="waikato&KingCountryTodoButton">To do's</button>
                     <button id="waikato&KingCountryEssenButton">Essen</button>
                 </div>
-                <div id="bayOfPlenty">
-                    <img id="bayOfPlentyImg" src="">
+
+                <div class="region" id="bayOfPlenty">
                     <h2>Bay of Plenty</h2>
+                    <img src="pictures/auckland.JPG">
                     <h3 id="bayOfPlentyTextart">Kurze Beschreibung:</h3>
                     <p id="bayOfPlentyParagraph">
                         Als Cook 1769 an dieser Bucht vorbeisegelte, taufte er sie Bay of Plenty ("Bucht des Überflusses") - und noch heute macht sie ihrem Namen alle Ehre:
@@ -139,9 +197,10 @@
                     <button id="bayOfPlentyTodoButton">To do's</button>
                     <button id="bayOfPlentyEssenButton">Essen</button>
                 </div>
-                <div id="eastCoast">
-                    <img id="eastCoastImg" src="">
+
+                <div class="region" id="eastCoast">
                     <h2>East Coast</h2>
+                    <img src="pictures/auckland.JPG">
                     <h3 id="eastCoastTextart">Kurze Beschreibung:</h3>
                     <p id="eastCoastParagraph">
                     	Neuseeland ist für seinen Mix aus ganz unterschiedlichen Landschaften bekannt, doch an der East Coast stehen vor allem die soziologischen Kontraste im Vordergrund.
@@ -159,9 +218,10 @@
                     <button id="eastCoastTodoButton">To do's</button>
                     <button id="eastCoastEssenButton">Essen</button>
                 </div>
-                <div id="zentraleHochebene">
-                    <img id="zentraleHochebeneImg" src="">
+
+                <div class="region" id="zentraleHochebene">
                     <h2>Zentrale Hochebene</h2>
+                    <img src="pictures/auckland.JPG">
                     <h3 id="zentraleHochebeneTextart">Kurze Beschreibung:</h3>
                     <p id="zentraleHochebeneParagraph">
                     	Wer meint, diese Region sei eine triste  topfebene Landschaft, täuscht sich gewaltig. Zunächst einmal ist sie gar nicht flach. In der Mitte der Hochebene und im Herzen des Tongariro National Park
@@ -179,9 +239,10 @@
                     <button id="zentraleHochebeneTodoButton">To do's</button>
                     <button id="zentraleHochebeneEssenButton">Essen</button>
                 </div>
-                <div id="taranaki">
-                    <img id="taranakiImg" src="">
+
+                <div class="region" id="taranaki">
                     <h2>Taranaki</h2>
+                    <img src="pictures/auckland.JPG">
                     <h3 id="taranakiTextart">Kurze Beschreibung:</h3>
                     <p id="taranakiParagraph">
                         Taranaki, auf halbem Weg zwischen Auckland und Wellington gelegen, ist in vielerlei Hinsicht einzigartig. Etwas abseits vom Schuss lebt die Region vom fruchtbaren Land und den natürlichen Ressourcen 
@@ -198,9 +259,10 @@
                     <button id="taranakiTodoButton">To do's</button>
                     <button id="taranakiEssenButton">Essen</button>
                 </div>
-                <div id="whanganui&PalmerstonNorth">
-                    <img id="whanganui&PalmerstonNorthImg" src="">
+
+                <div class="region" id="whanganui&PalmerstonNorth">
                     <h2>Whanganui & PalmerstonNorth</h2>
+                    <img src="pictures/auckland.JPG">
                     <h3 id="whanganui&PalmerstonNorthTextart">Kurze Beschreibung:</h3>
                     <p id="whanganui&PalmerstonNorthParagraph">
                         Die Bezirke Whanganui und Manawatu nehmen einen Großteil der südlichen Nordinsel ein. Diese Region erstreckt sich vom Tongariro National Park im Norden hinunter bis nach Wellington. Zwischen den
@@ -216,9 +278,10 @@
                     <button id="whanganui&PalmerstonNorthTodoButton">To do's</button>
                     <button id="whanganui&PalmerstonNorthEssenButton">Essen</button>
                 </div>
-                <div id="wellington">
-                    <img id="wellingtonImg" src="">
+
+                <div class="region" id="wellington">
                     <h2>Wellington</h2>
+                    <img src="pictures/auckland.JPG">
                     <h3 id="wellingtonTextart">Kurze Beschreibung:</h3>
                     <p id="wellingtonParagraph">
                         Wen es auf seiner Neuseelandreise bislang nur in die Wildnis und in Kuhdörfer verschlagen hat, der kann sich in Wellington nun die Spinnweben aus den Haaren pusten lassen. Programmkinos, hippe
@@ -237,10 +300,9 @@
                     <button id="wellingtonEssenButton">Essen</button>
                 </div>
                 
-<!--        Südinsel: -->
-                <div id="marlborough&Nelson">
-                    <img id="marlborough&NelsonImg" src="">
+                <div class="region" id="marlborough&Nelson">
                     <h2>Marlborough & Nelson</h2>
+                    <img src="pictures/auckland.JPG">
                     <h3 id="marlborough&NelsonTextart">Kurze Beschreibung:</h3>
                     <p id="marlborough&NelsonParagraph">
                         Für viele Traveller sind Marlborough und Nelson die erste Begegnung mit der - wie die Bewohner der Südinsel sagen - „Hauptinsel" Neuseelands. Nachdem sie das windige Wellington verlassen und die
@@ -256,9 +318,10 @@
                     <button id="marlborough&NelsonTodoButton">To do's</button>
                     <button id="marlborough&NelsonEssenButton">Essen</button>
                 </div>
-                <div id="christchurch&Canterbury">
-                    <img id="christchurch&CanterburyImg" src="">
+
+                <div class="region" id="christchurch&Canterbury">
                     <h2>Christchurch & Canterbury</h2>
+                    <img src="pictures/auckland.JPG">
                     <h3 id="christchurch&CanterburyTextart">Kurze Beschreibung:</h3>
                     <p id="christchurch&CanterburyParagraph">
                         Es ist wohl nur halb im Scherz, wenn die Bürger von Canterbury erklären, eigentlich müsse die Südinsel ein eigener Staat sein. Schaut man sich die Region an, versteht man, warum sie so viel Stolz
@@ -276,9 +339,10 @@
                     <button id="christchurch&CanterburyTodoButton">To do's</button>
                     <button id="christchurch&CanterburyEssenButton">Essen</button>
                 </div>
-                <div id="otago">
-                    <img id="otagoImg" src="">
+
+                <div class="region" id="otago">
                     <h2>Otago</h2>
+                    <img src="pictures/auckland.JPG">
                     <h3 id="otagoTextart">Kurze Beschreibung:</h3>
                     <p id="otagoParagraph">
                         	Otago birgt städtische wie ländliche Highlights: Hier kann man den Massen von Queenstown entfliehen, in der coolsten Stadt der Südinsel feiern und wilde Tiere hautnah erleben. lm Herzen Otagos
@@ -294,9 +358,10 @@
                     <button id="otagoTodoButton">To do's</button>
                     <button id="otagoEssenButton">Essen</button>
                 </div>
-                <div id="fjordland&Southland">
-                    <img id="fjordland&SouthlandImg" src="">
+
+                <div class="region" id="fjordland&Southland">
                     <h2>Fjordland & Southland</h2>
+                    <img src="pictures/auckland.JPG">
                     <h3 id="fjordland&SouthlandTextart">Kurze Beschreibung:</h3>
                     <p id="fjordland&SouthlandParagraph">
                         Das untere Ende der Südinsel verfügt über einige der spektakulärsten Landschaften des Landes. lm Westen liegt der Fiordland National Park mit seinen gezackten, nebligen Gipfeln, glitzernden Seen und
@@ -312,9 +377,10 @@
                     <button id="fjordland&SouthlandTodoButton">To do's</button>
                     <button id="fjordland&SouthlandEssenButton">Essen</button>
                 </div>
-                <div id="queenstown">
-                    <img id="queenstownImg" src="">
+
+                <div class="region" id="queenstown">
                     <h2>Queenstown</h2>
+                    <img src="pictures/auckland.JPG">
                     <h3 id="queenstownTextart">Kurze Beschreibung:</h3>
                     <p id="queenstownParagraph">
                         Gäbe es Queenstown noch nicht, müsste man es erfinden. Angesichts der filmreifen Kulisse aus Bergen und Seen und der enormen Bandbreite von Aktivitäten ist es oft schwer zu entscheiden, was man als
@@ -331,9 +397,10 @@
                     <button id="queenstownTodoButton">To do's</button>
                     <button id="queenstownEssenButton">Essen</button>
                 </div>
-                <div id="westCoast">
-                    <img id="westCoastImg" src="">
+
+                <div class="region" id="westCoast">
                     <h2>West Coast</h2>
+                    <img src="pictures/auckland.JPG">
                     <h3 id="westCoastTextart">Kurze Beschreibung:</h3>
                     <p id="westCoastParagraph">
                         Was für einen Unterschied doch eine Gebirgskette ausmacht! Eingeklemmt zwischen der wilden Tasmansee und den Gipfeln der Southern Alps ist die West Coast (auch Westland genannt) mit nichts in
@@ -350,73 +417,81 @@
                     <button id="westCoastEssenButton">Essen</button>
                 </div>
             </div>
-            
+
+            <!--        Das folgende ist ein Formular, welches die Nutzereingaben per RegEx prüft. -->
+            <!--        Sind sie zulässig werden sie per submit (Enter oder Button click) weitergeleitet.-->
             <div id="formular">
-<!--        Das folgende ist ein Formular, welches die Nutzereingaben per RegEx prüft. -->
-<!--        Sind sie zulässig werden sie per submit (Enter oder Button click) weitergeleitet.-->
+
+                <h2>Newsletter bestellen</h2>
+
                 <form class="newsFormular" action="http://www.formular-chef.de/fc.cgi" name="newsFormular">
-<!--                Ich habe das Attribut type von allen inputs entfernt da es meine Abfrage per RegEx gestört hat. -->
-                    <div>
+
+                    <p>Geben Sie hier ihre Daten ein, damit Sie immer mit den neuesten Infos versorgt werden!</p>
+                <!--                Ich habe das Attribut type von allen inputs entfernt da es meine Abfrage per RegEx gestört hat. -->
+                    <div class="formzeile">
                         <label for="vorname">Vorname:</label>
-                        <input id="vorname" name="vorname">
-                        <label for="vorname"  id="vornameWarnung"></label>
+                        <input id="vorname" name="vorname" placeholder="Bitte den Vornamen eintragen">
+                        <label for="vorname"  class="warnung" id="vornameWarnung"></label>
                     </div>
                     
-                    <div>
+                    <div class="formzeile">
                         <label for="nachname">Nachname*: </label>
-                        <input id="nachname" name="nachname">
-                        <label for="nachname" id="nachnameWarnung"></label>
+                        <input id="nachname" name="nachname" placeholder="Bitte den Nachnamen eintragen">
+                        <label for="nachname" class="warnung" id="nachnameWarnung"></label>
                     </div>
                     
-                    <div>
+                    <div class="formzeile">
                         <label for="email">E-Mail:</label>
-                        <input id="email" name="email">
-                        <label for="email" id="emailWarnung"></label>
+                        <input id="email" name="email"
+                        placeholder="Bitte die E-Mail Adresse eintragen">
+                        <label for="email" class="warnung" id="emailWarnung"></label>
                     </div>
                     
-                    <div>
+                    <div class="formzeile">
                         <label for="tel">Telefonnr.:</label>
-                        <input id="tel" name="tel">
-                        <label for="tel" id="telWarnung"></label>
+                        <input id="tel" name="tel" placeholder="Bitte die Telefonnummer eintragen">
+                        <label for="tel" class="warnung" id="telWarnung"></label>
                     </div>
                     
-                    <div>
+                    <div class="formzeile">
                         <label for="strasse">Straße, Hausnr.*:</label>
-                        <input id="strasse" name="strasse">
-                        <label for="strasse" id="strasseWarnung"></label>
+                        <input id="strasse" name="strasse"
+                        placeholder="Bitte die Straße eintragen">
+                        <label for="strasse" class="warnung" id="strasseWarnung"></label>
                     </div>
                     
-                    <div>
+                    <div class="formzeile">
                         <label for="plz">Postleitzahl*:</label>
-                        <input id="plz" name="plz">
-                        <label for="plz" id="plzWarnung"></label>
+                        <input id="plz" name="plz" placeholder="Bitte die PLZ eintragen">
+                        <label for="plz" class="warnung" id="plzWarnung"></label>
                     </div>
                     
-                    <div>
+                    <div class="formzeile">
                         <label for="stadt">Stadt*:</label>
-                        <input id="stadt" name="stadt">
-                        <label for="stadt" id="stadtWarnung"></label>
+                        <input id="stadt" name="stadt" placeholder="Bitte die Stadt eintragen">
+                        <label for="stadt" class="warnung" id="stadtWarnung"></label>
                     </div>
                     
-                    <div>
+                    <div class="formzeile">
                         <label for="land">Land*:</label>
-                        <input id="land" name="land">
+                        <input id="land" name="land" placeholder="Bitte dsd Land eintragen">
                         <label for="land" id="landWarnung"></label>
                     </div>
                     
-<!--
+                    <!--
                     <div>
                         <label for="captcha">Bitte gib die gezeigte Zahl ein*:</label>
                         <input type="number" id="captcha" name="captcha" required>
                     </div>
 -->
-                    
-                    <div>
+                    <div class="formzeile">
 <!--                    type="submit" etfernt, da sonst .onclick nicht funktioniert-->
                         <button id="absendenButton">Absenden</button>
                     </div>
                 </form>
             </div>
+
+
         </main>
         
         
@@ -427,7 +502,7 @@
         <footer>
         </footer>
         
-        
+        <script src="js/funktionen.js"></script>
         
     </body>
        
@@ -439,4 +514,4 @@
     
     E N D E
     
-=================================================================================================-->
+=================================================================================================

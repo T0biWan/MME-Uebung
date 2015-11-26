@@ -8,28 +8,57 @@
 ====================================================================================================*/	
 
 @media screen {
-    html, body {
+
+    h2{
         margin: 0;
-        padding: 0;
-        height: 100%;
-        width: 100%;
+        font-weight: 300;
+        font-size: 400%;
+        text-align: center;
     }
-    
-    div.regionen img {
-        width: 35%;
-        padding-left: 2%;
+    h3{
+        padding-top: 15%;
+        margin-left: 41%;
+        font-weight: 400;
+        font-size: 175%;
+    }
+
+    p{
+        padding-top: 4%;
+        margin-left: 3%;
+        font-size: 110%;
+        font-weight: 300;
+        clear: both;
     }
         /*position: fixed;*/
-    
-    div.regionen h2{
-        margin-left: 1%;
-        
-    }
     
     div.regionen p {
         width: 60%;
         padding-right: 2%;
         padding-left: 1%;
+    }
+
+    .regionen img {
+        /*!... Karte: siehe styles.css ...!*/
+        margin-top: 4%;
+        padding-left: 4%;
+        float: left;
+        width: 35%;
+    }
+
+    .regionen .contentbutton{
+        width: 5%;
+        padding-top: 5%;
+        padding-left: 2%;
+    }
+    .regionen .contentbutton:hover{
+        width: 6%;
+        padding-top: 5%;
+        padding-left: 2%;
+    }
+
+    button:hover{
+        background-color: rgb(235, 195, 59);
+        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
     }
     
 
