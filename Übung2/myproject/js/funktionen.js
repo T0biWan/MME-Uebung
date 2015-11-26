@@ -14,10 +14,10 @@
 //
 //================================================================================================
 
-var vornameOk = false;
+var vornameOk = true;
 var nachnameOk = false;
-var emailOk = false;
-var telOk = false;
+var emailOk = true;
+var telOk = true;
 var strasseOk = false;
 var plzOk = false;
 var stadtOk = false;
@@ -52,36 +52,54 @@ function funktionenInitialisieren() {
         return darfSenden();
     }
     
+    
+    
     document.getElementById("vorname").onkeyup = function (event) {
         checkEingabe(vorname, name, false);
+        if(vornameOk) document.getElementById("vorname").style.borderColor = 'blue';
+        else document.getElementById("vorname").style.borderColor = 'red';
     }
     
     document.getElementById("nachname").onkeyup = function (event) {
         checkEingabe(nachname, name, true);
+        if(nachnameOk) document.getElementById("nachname").style.borderColor = 'blue';
+        else document.getElementById("nachname").style.borderColor = 'red';
     }
     
     document.getElementById("email").onkeyup = function (event) {
-        checkEingabe(email, name, false);
+        checkEingabe(email, email, false);
+        if(emailOk) document.getElementById("email").style.borderColor = 'blue';
+        else document.getElementById("email").style.borderColor = 'red';
     }
     
     document.getElementById("tel").onkeyup = function (event) {
-        checkEingabe(tel, name, false);
+        checkEingabe(tel, tel, false);
+        if(telOk) document.getElementById("tel").style.borderColor = 'blue';
+        else document.getElementById("tel").style.borderColor = 'red';
     }
     
     document.getElementById("strasse").onkeyup = function (event) {
-        checkEingabe(strasse, name, true);
+        checkEingabe(strasse, strasse, true);
+        if(strasseOk) document.getElementById("strasse").style.borderColor = 'blue';
+        else document.getElementById("strasse").style.borderColor = 'red';
     }
     
     document.getElementById("plz").onkeyup = function (event) {
-        checkEingabe(plz, name, true);
+        checkEingabe(plz, plz, true);
+        if(plzOk) document.getElementById("plz").style.borderColor = 'blue';
+        else document.getElementById("plz").style.borderColor = 'red';
     }
     
     document.getElementById("stadt").onkeyup = function (event) {
         checkEingabe(stadt, name, true);
+        if(stadtOk) document.getElementById("stadt").style.borderColor = 'blue';
+        else document.getElementById("stadt").style.borderColor = 'red';
     }
     
     document.getElementById("land").onkeyup = function (event) {
         checkEingabe(land, name, true);
+        if(landOk) document.getElementById("land").style.borderColor = 'blue';
+        else document.getElementById("land").style.borderColor = 'red';
     }
     
     
@@ -1022,19 +1040,6 @@ function bildAendern(button) {
             document.getElementById("westCoastImg").src = "pictures/westCoast/X.JPG";
             break;
     }
-}
-
-function checkEingaben () {
-    //checkEingaben ruft für jedes input-Feld des Formulars die Methode checkEingabe auf
-    //Letztere gibt einen Boolean zurück. Aus Allen Booleans wird der Rückgabewert von checkEingaben()
-    checkEingabe(vorname, name, false);
-    checkEingabe(nachname, name, true); 
-    checkEingabe(email, email, false); 
-    checkEingabe(tel, tel, false); 
-    checkEingabe(strasse, strasse, true); 
-    checkEingabe(plz, plz, true);
-    checkEingabe(stadt, name, true);
-    checkEingabe(land, name, true);
 }
 
 function darfSenden() {
