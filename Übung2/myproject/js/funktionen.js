@@ -64,50 +64,42 @@ function funktionenInitialisieren() {
     // Bei falscher eingabe wird das Feld rot markiert.
     document.getElementById("vorname").onkeyup = function (event) {
         checkEingabe(vorname, name, false);
-        if(!vornameOk) document.getElementById("vorname").style.borderColor = 'red';
-        //else document.getElementById("vorname").style.borderColor = default;
+        setIcon(vorname);
     }
     
     document.getElementById("nachname").onkeyup = function (event) {
         checkEingabe(nachname, name, true);
-        if(!nachnameOk) document.getElementById("nachname").style.borderColor = 'red';
-        else document.getElementById("nachname").style.borderColor = 'white';
+        setIcon(nachname);
     }
     
     document.getElementById("email").onkeyup = function (event) {
         checkEingabe(email, email, false);
-        if(!emailOk) document.getElementById("email").style.borderColor = 'red';
-        else document.getElementById("email").style.borderColor = 'white';
+        setIcon(email);
     }
     
     document.getElementById("tel").onkeyup = function (event) {
         checkEingabe(tel, tel, false);
-        if(!telOk) document.getElementById("tel").style.borderColor = 'red';
-        else document.getElementById("tel").style.borderColor = 'white';
+        setIcon(tel);
     }
     
     document.getElementById("strasse").onkeyup = function (event) {
         checkEingabe(strasse, strasse, true);
-        if(!strasseOk) document.getElementById("strasse").style.borderColor = 'red';
-        else document.getElementById("strasse").style.borderColor = 'white';
+        setIcon(strasse);
     }
     
     document.getElementById("plz").onkeyup = function (event) {
         checkEingabe(plz, plz, true);
-        if(!plzOk) document.getElementById("plz").style.borderColor = 'red';
-        else document.getElementById("plz").style.borderColor = 'white';
+        setIcon(plz);
     }
     
     document.getElementById("stadt").onkeyup = function (event) {
         checkEingabe(stadt, name, true);
-        if(!stadtOk) document.getElementById("stadt").style.borderColor = 'red';
-        else document.getElementById("stadt").style.borderColor = 'white';
+        setIcon(stadt);
     }
     
     document.getElementById("land").onkeyup = function (event) {
         checkEingabe(land, name, true);
-        if(!landOk) document.getElementById("land").style.borderColor = 'red';
-        else document.getElementById("land").style.borderColor = 'red';
+        setIcon(land);
     }
     
     
@@ -1054,14 +1046,6 @@ function darfSenden() {
     return vornameOk && nachnameOk && emailOk && telOk && strasseOk && plzOk && stadtOk && landOk;
 }
 
-
-
-//================================================================================================
-//
-//  Hilfsfunktionen
-//
-//================================================================================================
-
 function checkEingabe (inputName, inputTyp, required) {
     //Variablen deklarieren
     //Input zeigt auf die Texteingabe
@@ -1168,6 +1152,62 @@ function checkEingabe (inputName, inputTyp, required) {
     return eingabeKorrekt;
 }
 
+function setIcon (inputName) {
+    var inputOk;
+    var icon;
+    switch (inputName) {
+        case vorname:
+            inputOk = vornameOk;
+            icon = "vornameIcon";
+            break;
+            
+        case nachname:
+            inputOk = nachnameOk;
+            icon = "nachnameIcon";
+            break;
+            
+        case email:
+            inputOk = emailOk;
+            icon = "emailIcon";
+            break;
+            
+        case tel:
+            inputOk = telOk;
+            icon = "telIcon";
+            break;
+            
+        case strasse:
+            inputOk = strasseOk;
+            icon = "strasseIcon";
+            break;
+            
+        case plz:
+            inputOk = plzOk;
+            icon = "plzIcon";
+            break;
+            
+        case stadt:
+            inputOk = stadtOk;
+            icon = "stadtIcon";
+            break;
+            
+        case land:
+            inputOk = landOk;
+            icon = "landIcon";
+            break;
+    }
+    if(inputOk) document.getElementById(icon).src="pictures/icons/formular/yesIcon.png";
+    else document.getElementById(icon).src="pictures/icons/formular/noIcon.png";
+}
+
+
+
+//================================================================================================
+//
+//  Hilfsfunktionen
+//
+//================================================================================================
+
 function eingabeIstLeer (inputName) {
     return inputName == "";
 }
@@ -1191,7 +1231,7 @@ function falschesFormat (input, output, inputTyp) {
             break;
         
         case strasse:
-            regEx = /^[-a-z.ß]{1,30} \d{0,5} ?[-a-z]{0,5}$/i;
+            regEx = /^([-a-z.ß]{1,30})( \d{1,5})( )?([-a-z]{0,5})?$/i;
             break;
         
         case plz:
