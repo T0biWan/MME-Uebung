@@ -4,7 +4,7 @@
 //    Datei: funkJQ.js
 //    Datum: 29.12.2015
 //    Autor: Tobias & Leon
-//=================================================================================================
+//================================================================================================
 
 
 
@@ -13,6 +13,7 @@
 //  Attribute
 //
 //================================================================================================
+// fold
 
 // Diese Variablen beeinflussen das Submit verhalten des Formulars.
 // Die freiwilligen Felder werden mit true initialisiert.
@@ -29,16 +30,16 @@ var stadtOk = false;
 var landOk = false;
 
 
-
+// end
 //================================================================================================
 //
 //  Initialisierung
 //
 //================================================================================================
+// fold
 
 //Durch das folgende Konstrukt wird sichergestellt das die Funktionen
 //erst mit den Buttons verknüpft werden, wenn die Seite geladen ist.
-
 $(window).load(function() {
 	funktionenInitialisieren();
 	console.log("initialisiert")
@@ -46,11 +47,13 @@ $(window).load(function() {
 
 
 
+// end
 //================================================================================================
 //
 //  Module
 //
 //================================================================================================
+// fold
 
 function funktionenInitialisieren() {
     // Initialisierung des Formulars, denn durch onsubmit wird auch ein Enter erkannt.
@@ -603,12 +606,13 @@ function setIcon (inputName) {
 }
 
 
-
+// end
 //================================================================================================
 //
 //  Hilfsfunktionen
 //
 //================================================================================================
+// fold
 
 function eingabeIstLeer (inputName) {
     return inputName == "";
@@ -646,6 +650,7 @@ function falschesFormat (input, output, inputTyp) {
 
 
 
+// end
 //================================================================================================
 //
 //  Slider
