@@ -597,10 +597,8 @@ function setIcon (inputName) {
             icon = "#landIcon";
             break;
     }
-    //if(inputOk) document.getElementById(icon).src="pictures/icons/formular/yesIcon.png";
-    //else document.getElementById(icon).src="pictures/icons/formular/noIcon.png";
 	
-	if(inputOk) $(icon).attr("src", "pictures/icons/formular/yesIcon.png");
+    if(inputOk) $(icon).attr("src", "pictures/icons/formular/yesIcon.png");
 	else $(icon).attr("src", "pictures/icons/formular/noIcon.png");
 }
 
