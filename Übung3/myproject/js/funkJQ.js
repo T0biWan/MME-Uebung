@@ -38,10 +38,10 @@ var landOk = false;
 
 //Durch das folgende Konstrukt wird sichergestellt das die Funktionen
 //erst mit den Buttons verknüpft werden, wenn die Seite geladen ist.
-function init() {
-    funktionenInitialisieren();
-}
-window.addEventListener("load", init, false);
+
+$(window).load(function() {
+	funktionenInitialisieren();
+});
 
 
 
