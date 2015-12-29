@@ -59,6 +59,8 @@ function funktionenInitialisieren() {
 		return darfSenden();
 	});
     
+	
+	
     // Die folgenden Funktionen prüfen bei Eingabe das input-Feld.
     // Bei falscher eingabe wird das Feld rot markiert.
 	$("#vorname").keyup(function(event){	
@@ -105,25 +107,25 @@ function funktionenInitialisieren() {
     
     // Buttons zum ändern der Texte für die Regionen
     // Wird ein Button geklickt, wird über paragraphAendern der jeweilige Text in p geändert.
-    document.getElementById("aucklandInfoButton").onclick = function () {
-        paragraphAendern("aucklandInfoButton");
+    $("#aucklandInfoButton").click(function(){
+		paragraphAendern("aucklandInfoButton");
         bildAendern("aucklandInfoButton");
-    }
+	});
     
-    document.getElementById("aucklandKlimaButton").onclick = function () {
+    $("#aucklandKlimaButton").click(function(){
         paragraphAendern("aucklandKlimaButton");
         bildAendern("aucklandKlimaButton");
-    }
+    });
     
-    document.getElementById("aucklandTodoButton").onclick = function () {
+    $("#aucklandTodoButton").click(function(){
         paragraphAendern("aucklandTodoButton");
         bildAendern("aucklandTodoButton");
-    }
+    });
     
-    document.getElementById("aucklandEssenButton").onclick = function () {
+    $("#aucklandEssenButton").click(function(){
         paragraphAendern("aucklandEssenButton");
         bildAendern("aucklandEssenButton");
-    }
+    });
     
     
     
