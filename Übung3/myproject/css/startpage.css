@@ -1,0 +1,51 @@
+/*====================================================================================================
+    Styles
+    Styles für die Regionen Neuseelands
+    
+    Datei: regionen.css
+    Datum: 08.11.2015
+    Autor: Tobias & Leon
+====================================================================================================*/
+
+@media screen {
+
+    /*.startpage{
+       background-color: rgb (20, 20, 20);
+       background-size: cover;
+        background-image: url(../pictures/landscape01.jpg);
+    }*/
+    #drueber{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 100vh;
+    }
+
+    #logo{
+        width: 28%;
+        margin-left: 37%; 
+        margin-top: 10%; 
+    }
+
+    #startpfeil{
+        width: 6%;
+        margin-top: 15%;
+        margin-left: 48%;
+    }
+    #startpfeil:hover{
+        padding-top: 2%;
+    }
+    
+    .item{
+        max-height: 100vh;
+    }
+
+
+} /* Ende @media - nicht löschen */
+
+/*====================================================================================================
+
+    E N D E
+
+====================================================================================================*/
