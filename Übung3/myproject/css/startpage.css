@@ -22,52 +22,23 @@
         height: 100vh;
     }
 
-    #Slideshow{
-        height: 100vh;
-    }
-
-    #slice1{
-        background-image: url(../pictures/landscape01.jpg);
-        background-size: cover; 
-        height: 100vh;
-    }
-    #slice2{
-        background-image: url(../pictures/landscape02.jpg);
-        background-size: cover; 
-        height: 100vh;
-    }
-    #slice3{
-        background-image: url(../pictures/landscape03.jpg);
-        background-size: cover; 
-        height: 100vh;
-    }
-    #slice4{
-        background-image: url(../pictures/landscape04.jpg);
-        background-size: cover; 
-        height: 100vh;
-    }
-    #slice5{
-        background-image: url(../pictures/landscape05.jpg);
-        background-size: cover; 
-        height: 100vh;
-    }
-
-    #slice6{
-        background-image: url(../pictures/landscape06.jpg);
-        background-size: cover; 
-        height: 100vh;
-    }
-
     #logo{
         width: 28%;
-        padding-left: 37%; 
-        padding-top: 10%; 
+        margin-left: 37%; 
+        margin-top: 10%; 
     }
 
     #startpfeil{
         width: 6%;
-        padding-top: 15%;
-        padding-left: 48%;
+        margin-top: 15%;
+        margin-left: 48%;
+    }
+    #startpfeil:hover{
+        padding-top: 2%;
+    }
+    
+    .item{
+        max-height: 100vh;
     }
 
 

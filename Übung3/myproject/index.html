@@ -16,14 +16,20 @@
 
 	<head>
    		<meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
    		<title>Kia Ora!</title>
    		<meta id="description" content="to do">
+        
     	<link rel="stylesheet" href="css/merge.css">
     	<link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
         <!--Die JavaScript-Datei wird aus Performance-Gründen erst am Ende dieser Seite eingebunden-->
         <!--Die jQuery-Bibliothek wird aus Performance-Gründen erst am Ende dieser Seite eingebunden-->
-        <script src="js/jquery-2.1.4.min.js"></script>
-		<script src="js/funkJQ.js"></script>
+        <!--...ALLE Scripte werden aus Perfomance-Gründen erst am Ende dieeser Seite eingebunden-->
+        
+        
+
 	</head>
     
     
@@ -54,22 +60,51 @@
 
             <div class="startpage">
                 
-               <div id="Slideshow">
-                     <div class="slice" id="slice1"></div>
-                     <div class="slice" id="slice2"></div>
-                     <div class="slice" id="slice3"></div>
-                     <div class="slice" id="slice4"></div>
-                     <div class="slice" id="slice5"></div>
-                     <div class="slice" id="slice6"></div>
-                 </div>
-
-                <div id="drueber"> 
-                 <img id="logo" src="pictures/KiaOra_big.png">
-                
-                 <a href="#auckland"> <img id="startpfeil" src="pictures/arrow_down.png"> </a>
+            <div class="carousel slide" id="myCarousel" data-ride="carousel">
+             <!--  Positionsanzeige 
+              <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active" ></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+                <li data-target="#myCarousel" data-slide-to="3"></li>
+                <li data-target="#myCarousel" data-slide-to="4"></li>
+                <li data-target="#myCarousel" data-slide-to="5"></li>
+              </ol>-->
+                <!-- carousel items -->
+              <div class="carousel-inner" role="listbox">
+                <div class="item   active">
+                  <img class="first-slide" alt="Erste Folie" src="pictures/landscape01.jpg">
                 </div>
+                <div class="item">
+                  <img class="second-slide" alt="Zweite Folie" src="pictures/landscape02.jpg">
+                  <div class="container">
+                    <div class="carousel-caption">
+                    </div>
+                  </div>
+                </div>
+                <div class="item">
+                  <img class="third-slide" alt="Dritte Folie" src="pictures/landscape04.jpg">
+                  <div class="container">
+                    </div>
+                  </div>
+                  <div class="item">
+                  <img class="third-slide" alt="Dritte Folie" src="pictures/landscape05.jpg">
+                  <div class="container">
+                    </div>
+                  </div>
+                  <!--<div class="item">
+                  <img class="third-slide" alt="Dritte Folie" src="pictures/landscape06.jpg">
+                  <div class="container">
+                    </div>
+                  </div>-->
+                  </div>
+                </div>
+              </div>
+            </div>
 
-
+            <div id="drueber"> 
+                <img id="logo" src="pictures/KiaOra_big.png">
+                <a href="#auckland"> <img id="startpfeil" src="pictures/arrow_down.png"> </a>
             </div>
 
             <div class="regionen">
@@ -524,6 +559,10 @@
         <script src="js/funkJQ.js"></script>
         <script src="js/jquery-2.1.4.min.js"></script>
 -->
+        <script src="js/jquery-2.1.4.min.js"></script>
+		<script src="js/funkJQ.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/animationen.js"></script>
         
     </body>
        
@@ -531,8 +570,8 @@
     
 </html>
 
-<!--===============================================================================================
+<!--================================================================================================
     
     E N D E
     
-================================================================================================-->
+=================================================================================================
