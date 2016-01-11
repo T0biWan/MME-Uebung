@@ -1,0 +1,114 @@
+ html, body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+    font-family: 'Open Sans', sans-serif;
+    background-image: url(../pictures/landscape06.jpg);
+    background-size: cover;
+}
+body{
+    padding: 2%;
+}
+
+h1{
+    font-weight: 300;
+    font-size: 4em;
+    text-align: center;  
+}
+h2{
+    color: rgb(255, 255, 255);
+    margin-bottom: 2%;
+}
+
+section{
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-left: 2%;
+    padding-right: 2%;
+    margin-top: 7%;
+    margin-left: 10%;
+    margin-right: 10%;
+    background-color: rgba(50, 50, 50, 0.71);
+}
+
+section table{
+    color: white;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+table th {
+    font-size: 130%;
+    border: 1px solid #b7b7b7;
+}
+
+.Bedienung{
+    float: right;    
+}
+.Bedienung button{
+    background-color: rgb(186, 151, 33);
+        border: none;
+        border-radius: 1px;
+        color: white;
+        padding: 5px 10px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        margin: 4px 2px;
+        cursor: pointer;
+}
+.Bedienung button:hover{
+    background-color: rgb(33, 141, 186);
+}
+
+.radio{
+    margin-left:auto;
+    margin-right:auto;
+    max-width: 75rem;
+}
+
+/*MEDIA QUERY TABLET*/
+@media screen and (max-width: 900px){
+    table .Benzin {
+        display: none;
+    }
+    table .Besonderheiten {
+        display: none;
+    }
+}
+
+
+/*MEDIA QUERY PHONE*/
+@media screen and (max-width: 500px){
+    table .Fahrer {
+        display: none;
+    }
+    table .Plaetze {
+        display: none;
+    }
+    table .Benzin {
+        display: none;
+    }
+    table .Besonderheiten {
+        display: none;
+    }
+    
+    h2{
+        font-size: 1.4em;
+        margin-bottom: 4%;
+    }
+    h1{
+    font-size: 3em;
+    }
+    table{
+        font-size: 0.9em;
+    }
+    
+    .Bedienung button{
+        padding: 2px 6px;
+        margin: 2px 4px;
+        cursor: pointer;
+}
+}
+
