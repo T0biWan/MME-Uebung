@@ -45,6 +45,7 @@
 						$mysqli->close();
 			?>
 		</table>
+		<a href="tmp_hinzufuegen.php?&action=add">Hinzufügen</a>
 	</body>
 </html>
 

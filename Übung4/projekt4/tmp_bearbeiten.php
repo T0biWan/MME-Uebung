@@ -28,11 +28,11 @@
 							if($_GET["id"] == $id) {
 								echo "<tr>"
 									   ?> <input name="id" type='hidden' value="<?php echo $id;		?>")> <?php echo 
-									  "<td>" ?> <input name="etappe" type='text' value="<?php echo $etappe;		?>")> <?php echo "</td>"
+									   "<td>" ?> <input name="etappe" type='text' value="<?php echo $etappe;		?>")> <?php echo "</td>"
 									 . "<td>" ?> <input name="region" type='text' value="<?php echo $region;		?>")> <?php echo "</td>"
 									 . "<td>" ?> <input name="datum" type='text' value="<?php echo $datum;		?>")> <?php echo "</td>"
 									 . "<td>" ?> <input name="kommentar" type='text' value="<?php echo $kommentar;	?>")> <?php echo "</td>"
-									   ?> <input name="action" type='hidden' value="<?php echo "edit";		?>")> <?php echo 
+									   ?> <input name="action" type='hidden' value="edit"> <?php echo 
 									  "<td>" . "<input type='submit' value='Okay'>" . "</td>"
 									 . "<td>" . "<a href='tmp_submit.php?id=" . (int)htmlspecialchars($datensatz['id']) . "&action=delete" . "'>Löschen</a>"	. "</td>"
 									 . "</tr>\n";
