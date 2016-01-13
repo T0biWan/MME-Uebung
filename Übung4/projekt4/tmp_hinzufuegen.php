@@ -40,10 +40,32 @@
 		<form method="post" action="tmp_submit.php">
 			<table border='1'>
 				<tr>
-					<td><input name="etappe" type='text'></td>
-					<td><input name="region" type='text'></td>
-					<td><input name="datum" type='text'></td>
-					<td><input name="kommentar" type='text'></td>
+					<td><input name="etappe" type='text' placeholder="Etappe"></td>
+<!--					<td><input name="region" type='text'></td>-->
+					<td>
+						<select name="region">
+							<?php
+								$nordinsel	= array("Auckland", "Northland", "Coromandel Peninsula", "Waikato & King Country", "Bay Of Plenty", "East Coast", "Zentrale Hochebene",
+												  "Taranaki", "Whanganui & Palmerston North", "Wellington");
+								$suedinsel	= array("Marlborough & Nelson", "Christchurch & Canterbury", "Otago", "Fjordland & Southland",
+												  "Queenstown", "West Coast");
+					
+								echo "<option value='' disabled selected hidden>Region</option>";	//Platzhalter
+								echo "<optgroup label='Nordinsel'>";								// Unterteilung
+								foreach($nordinsel as $element) {
+									echo "<option value='$element'>$element</option>\n";
+								}
+								echo "</optgroup>";
+								echo "<optgroup label='Südinsel'>";									// Unterteilung
+								foreach($suedinsel as $element) {
+									echo "<option value='$element'>$element</option>\n";
+								}
+								echo "</optgroup>";
+							?>
+						</select>
+					</td>
+					<td><input name="datum" type='text' placeholder="Datum"></td>
+					<td><input name="kommentar" type='text' placeholder="Kommentar"></td>
 					<td><input name="action" type='hidden' value="add"></td>
 					<td><input type='submit' value='Okay'></td>
 				</tr>
