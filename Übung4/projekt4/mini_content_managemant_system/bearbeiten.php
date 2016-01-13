@@ -30,14 +30,14 @@ if (empty($_POST["titel"])) {
   $mysqli->close();
   }
 ?>
-<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
-Titel <br />
-<input type="text" name="titel" value="<?php echo htmlspecialchars($titel); ?>" /><br />
-Text <br />
-<textarea name="text" rows="5" cols="30"><?php echo htmlspecialchars($text); ?></textarea><br />
-<input type="hidden" name="id" value="<?php echo $id; ?>" />
-<input type="submit" />
-</form>
+	<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+		Titel <br />
+		<input type="text" name="titel" value="<?php echo htmlspecialchars($titel); ?>" /><br />
+		Text <br />
+		<textarea name="text" rows="5" cols="30"><?php echo htmlspecialchars($text); ?></textarea><br />
+		<input type="hidden" name="id" value="<?php echo $id; ?>" />
+		<input type="submit" />
+	</form>
 </body>
 </html>
 <?php

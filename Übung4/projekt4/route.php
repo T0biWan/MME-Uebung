@@ -38,7 +38,7 @@
 									. "<td>" . htmlspecialchars($datensatz['datum'])		. "</td>"
 									. "<td>" . htmlspecialchars($datensatz['kommentar'])	. "</td>"
 									. "<td>" . "<a href='tmp_bearbeiten.php?id="	. (int)htmlspecialchars($datensatz['id']) . "&action=edit" . "'>Bearbeiten</a>"	. "</td>"
-									. "<td>" . "<a href='tmp_delete.php?id="		. (int)htmlspecialchars($datensatz['id']) . "&action=delete" . "'>Löschen</a>"	. "</td>"
+									. "<td>" . "<a href='tmp_submit.php?id="		. (int)htmlspecialchars($datensatz['id']) . "&action=delete" . "'>Löschen</a>"	. "</td>"
 									. "</tr>\n";
 						}
 						$sql_abfrage->close();
