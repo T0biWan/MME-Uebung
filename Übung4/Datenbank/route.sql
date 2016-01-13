@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Erstellungszeit: 10. Jan 2016 um 20:34
+-- Erstellungszeit: 13. Jan 2016 um 20:09
 -- Server-Version: 10.1.9-MariaDB
--- PHP-Version: 5.6.15
+-- PHP-Version: 5.5.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Datenbank: `uni`
+-- Datenbank: `mme`
 --
 
 -- --------------------------------------------------------
@@ -30,18 +30,20 @@ CREATE TABLE `route` (
   `id` int(11) NOT NULL,
   `etappe` varchar(50) NOT NULL,
   `region` varchar(50) NOT NULL,
-  `kommentar` varchar(250) DEFAULT NULL
+  `datum` varchar(10) DEFAULT NULL,
+  `poi` varchar(50) DEFAULT NULL,
+  `kommentar` varchar(50) DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
 -- Daten für Tabelle `route`
 --
 
-INSERT INTO `route` (`id`, `etappe`, `region`, `kommentar`) VALUES
-(1, 'Auckland', 'Auckland', NULL),
-(2, 'Piha', 'Auckland', NULL),
-(3, 'Karekare', 'Auckland', NULL),
-(4, 'Matapouri', 'Northland', NULL);
+INSERT INTO `route` (`id`, `etappe`, `region`, `datum`, `poi`, `kommentar`) VALUES
+(1, 'Auckland', 'Auckland', '31.08.2012', NULL, 'Bungee-Jumping'),
+(2, 'Karekare', 'Auckland', '14.01.2016', NULL, 'Wandern'),
+(3, 'Tongariro', 'Zentrale Hochebene', '23.01.2016', NULL, 'Amon Amarth'),
+(4, 'Piha', 'Auckland', '', NULL, 'Surfen');
 
 --
 -- Indizes der exportierten Tabellen
@@ -61,7 +63,7 @@ ALTER TABLE `route`
 -- AUTO_INCREMENT für Tabelle `route`
 --
 ALTER TABLE `route`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
