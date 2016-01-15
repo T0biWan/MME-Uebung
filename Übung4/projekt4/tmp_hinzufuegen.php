@@ -45,9 +45,9 @@
 					<td>
 						<select name="region">
 							<?php
-								$nordinsel	= array("Auckland", "Northland", "Coromandel Peninsula", "Waikato & King Country", "Bay Of Plenty", "East Coast", "Zentrale Hochebene",
-												  "Taranaki", "Whanganui & Palmerston North", "Wellington");
-								$suedinsel	= array("Marlborough & Nelson", "Christchurch & Canterbury", "Otago", "Fjordland & Southland",
+								$nordinsel	= array("Auckland", "Northland", "Coromandel Peninsula", "Waikato und King Country", "Bay Of Plenty", "East Coast", "Zentrale Hochebene",
+												  "Taranaki", "Whanganui und Palmerston North", "Wellington");
+								$suedinsel	= array("Marlborough und Nelson", "Christchurch und Canterbury", "Otago", "Fjordland und Southland",
 												  "Queenstown", "West Coast");
 					
 								echo "<option value='' disabled selected hidden>Region</option>";	//Platzhalter
@@ -68,6 +68,7 @@
 					<td><input name="kommentar" type='text' placeholder="Kommentar"></td>
 					<td><input name="action" type='hidden' value="add"></td>
 					<td><input type='submit' value='Okay'></td>
+					<td><a href="route.php">Abbrechen</a></td>
 				</tr>
 			</table>
 		</form>

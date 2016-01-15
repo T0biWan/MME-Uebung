@@ -29,12 +29,34 @@
 								echo "<tr>"
 									   ?> <input name="id" type='hidden' value="<?php echo $id;		?>")> <?php echo 
 									   "<td>" ?> <input name="etappe" type='text' value="<?php echo $etappe;		?>")> <?php echo "</td>"
-									 . "<td>" ?> <input name="region" type='text' value="<?php echo $region;		?>")> <?php echo "</td>"
+//									 . "<td>" ?> <input name="region" type='text' value="<?php echo $region;		?>")> <?php echo "</td>"
+									 . "<td>" ?> .	<select name="region">
+														<?php
+															$nordinsel	= array("Auckland", "Northland", "Coromandel Peninsula", "Waikato und King Country", "Bay Of Plenty", "East Coast", "Zentrale Hochebene",
+																			  "Taranaki", "Whanganui und Palmerston North", "Wellington");
+															$suedinsel	= array("Marlborough und Nelson", "Christchurch und Canterbury", "Otago", "Fjordland und Southland",
+																			  "Queenstown", "West Coast");
+
+															//echo "<option selected>$region</option>";							//Platzhalter
+															echo "<optgroup label='Nordinsel'>";								// Unterteilung
+															foreach($nordinsel as $element) {
+																if($element == $region) echo "<option value='$element' selected>$element</option>\n";
+																else 					echo "<option value='$element'>			$element</option>\n";
+															}
+															echo "</optgroup>";
+															echo "<optgroup label='Südinsel'>";									// Unterteilung
+															foreach($suedinsel as $element) {
+																if($element == $region) echo "<option value='$element' selected>$element</option>\n";
+																else 					echo "<option value='$element'>			$element</option>\n";
+															}
+															echo "</optgroup>";
+														?>
+													</select> <?php echo "</td>"
 									 . "<td>" ?> <input name="datum" type='text' value="<?php echo $datum;		?>")> <?php echo "</td>"
 									 . "<td>" ?> <input name="kommentar" type='text' value="<?php echo $kommentar;	?>")> <?php echo "</td>"
 									   ?> <input name="action" type='hidden' value="edit"> <?php echo 
 									  "<td>" . "<input type='submit' value='Okay'>" . "</td>"
-									 . "<td>" . "<a href='tmp_submit.php?id=" . (int)htmlspecialchars($datensatz['id']) . "&action=delete" . "'>Löschen</a>"	. "</td>"
+									 . "<td>" . "<a href='route.php'>Abbrechen</a>"	. "</td>"
 									 . "</tr>\n";
 							} else {
 								echo "<tr>"

@@ -2,7 +2,7 @@
 	require_once "db_daten.php";
 	$host = htmlspecialchars($_SERVER["HTTP_HOST"]);
 	$uri  = rtrim(dirname(htmlspecialchars($_SERVER["PHP_SELF"])), "/\\");
-	$extra = "route.php";
+	$extra = "route_OnePage.php";
 	
 	if(isset($_GET['action'])) $action = htmlspecialchars($_GET['action']);
 	if(isset($_POST['action'])) {
