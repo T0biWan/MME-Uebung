@@ -5,14 +5,6 @@
     Datum: 11.01.2016
     Autor: Tobi Wan
 =================================================================================================-->
-
-
-
-<!--================================================================================================
-
-    Start
-
-=================================================================================================-->
 <!--fold-->
 <!DOCTYPE html>
 <html lang="de">
@@ -70,43 +62,43 @@
 									$sql_abfrage->close();
 									$mysqli->close();
 						?>
-			</table>
-			<!--action="<?php// echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>"-->
-			<form method="post" action="tmp_submit.php">
-				<table border='1'>
-					<tr>
-						<td><input name="etappe" type='text' placeholder="Etappe"></td>
-	<!--					<td><input name="region" type='text'></td>-->
-						<td>
-							<select name="region">
-								<?php
-									$nordinsel	= array("Auckland", "Northland", "Coromandel Peninsula", "Waikato und King Country", "Bay Of Plenty", "East Coast", "Zentrale Hochebene",
-													  "Taranaki", "Whanganui und Palmerston North", "Wellington");
-									$suedinsel	= array("Marlborough und Nelson", "Christchurch und Canterbury", "Otago", "Fjordland und Southland",
-													  "Queenstown", "West Coast");
+					</table>
+					<!--action="<?php// echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>"-->
+					<form method="post" action="tmp_submit.php">
+						<table border='1'>
+							<tr>
+								<td><input name="etappe" type='text' placeholder="Etappe"></td>
+			<!--					<td><input name="region" type='text'></td>-->
+								<td>
+									<select name="region">
+										<?php
+											$nordinsel	= array("Auckland", "Northland", "Coromandel Peninsula", "Waikato und King Country", "Bay Of Plenty", "East Coast", "Zentrale Hochebene",
+															  "Taranaki", "Whanganui und Palmerston North", "Wellington");
+											$suedinsel	= array("Marlborough und Nelson", "Christchurch und Canterbury", "Otago", "Fjordland und Southland",
+															  "Queenstown", "West Coast");
 
-									echo "<option value='' disabled selected hidden>Region</option>";	//Platzhalter
-									echo "<optgroup label='Nordinsel'>";								// Unterteilung
-									foreach($nordinsel as $element) {
-										echo "<option value='$element'>$element</option>\n";
-									}
-									echo "</optgroup>";
-									echo "<optgroup label='Südinsel'>";									// Unterteilung
-									foreach($suedinsel as $element) {
-										echo "<option value='$element'>$element</option>\n";
-									}
-									echo "</optgroup>";
-								?>
-							</select>
-						</td>
-						<td><input name="datum" type='text' placeholder="Datum"></td>
-						<td><input name="kommentar" type='text' placeholder="Kommentar"></td>
-						<td><input name="action" type='hidden' value="add"></td>
-						<td><input type='submit' value='Okay'></td>
-						<td><a href="route_OnePage.php">Abbrechen</a></td>
-					</tr>
-				</table>
-			</form>
+											echo "<option value='' disabled selected hidden>Region</option>";	//Platzhalter
+											echo "<optgroup label='Nordinsel'>";								// Unterteilung
+											foreach($nordinsel as $element) {
+												echo "<option value='$element'>$element</option>\n";
+											}
+											echo "</optgroup>";
+											echo "<optgroup label='Südinsel'>";									// Unterteilung
+											foreach($suedinsel as $element) {
+												echo "<option value='$element'>$element</option>\n";
+											}
+											echo "</optgroup>";
+										?>
+									</select>
+								</td>
+								<td><input name="datum" type='text' placeholder="Datum"></td>
+								<td><input name="kommentar" type='text' placeholder="Kommentar"></td>
+								<td><input name="action" type='hidden' value="add"></td>
+								<td><input type='submit' value='Okay'></td>
+								<td><a href="route_OnePage.php">Abbrechen</a></td>
+							</tr>
+						</table>
+					</form>
 		<?php
 			}
 				if($_GET["action"] == "edit") {
@@ -128,10 +120,11 @@
 													   "<td>" ?> <input name="etappe" type='text' value="<?php echo $etappe;		?>")> <?php echo "</td>"
 													 . "<td>" ?>	<select name="region">
 																		<?php
-																			$nordinsel	= array("Auckland", "Northland", "Coromandel Peninsula", "Waikato und King Country", "Bay Of Plenty", "East Coast", "Zentrale Hochebene",
+																			$nordinsel	= array("Auckland", "Northland", "Coromandel Peninsula", "Waikato und King Country",
+																								"Bay Of Plenty", "East Coast", "Zentrale Hochebene",
 																							  "Taranaki", "Whanganui und Palmerston North", "Wellington");
-																			$suedinsel	= array("Marlborough und Nelson", "Christchurch und Canterbury", "Otago", "Fjordland und Southland",
-																							  "Queenstown", "West Coast");
+																			$suedinsel	= array("Marlborough und Nelson", "Christchurch und Canterbury", "Otago",
+																								"Fjordland und Southland", "Queenstown", "West Coast");
 
 																			//echo "<option selected>$region</option>";							//Platzhalter
 																			echo "<optgroup label='Nordinsel'>";								// Unterteilung
@@ -172,7 +165,6 @@
 					</form>
 		<?php
 				}
-				//if($_GET["action"] == "delete") 
 			} else {
 		?>
 				<table border='1'>
