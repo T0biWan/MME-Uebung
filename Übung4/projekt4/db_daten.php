@@ -3,6 +3,6 @@
 	// Die Attribute des Konstruktors eines MySQLi-Objektes: Datenbankserver, Benutzername, Passwort und Datenbank
 	$mysqli = new mysqli("localhost", "root", "", "multimedia-engineering 1");
 	if($mysqli->connect_error) {
-		echo "<script>alert('Verbindung zur Datenbank konnte nicht hergestellt werden.')</script>";
+		// echo "<script>alert('Verbindung zur Datenbank konnte nicht hergestellt werden.')</script>";
 	}
 ?>
