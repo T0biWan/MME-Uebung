@@ -1,0 +1,203 @@
+@import url(modal.css);
+
+html, body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+    font-family: 'Open Sans', sans-serif;
+    background-image: url(../pictures/landscape06.jpg);
+    background-size: cover;
+}
+body{
+    padding: 2%;
+}
+
+h1{
+    font-family: 'Walter Turncoat', cursive;
+    font-size: 4em;
+    text-align: center;  
+}
+section{
+    padding: 3%;
+    margin-top: 7%;
+    margin-left: 7%;
+    margin-right: 7%;
+    background-color: rgba(50, 50, 50, 0.71);
+}
+h2{
+    color: rgb(213, 167, 11);
+    margin-top: 0;
+    margin-bottom: 2%;
+}
+
+
+section table{
+    color: white;
+    border: none;
+    border-bottom: 0px solid #fff;
+}
+table thead th {
+    font-size: 130%;
+}
+
+/*getreift*/
+tbody tr:nth-of-type(odd) { 
+  background: rgba(220, 220, 220, 0.1); 
+}
+
+/**Anker als Buttons**/
+.Bedienung{
+    float: left;    
+}
+.Bedienung a{
+        background-color: rgb(213, 167, 11);
+        border: none;
+        border-radius: 1px;
+        color: white;
+        padding: 5px 10px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        margin: 4px 2px;
+        cursor: pointer;
+}
+.Bedienung a:hover{
+    background-color: rgb(33, 186, 39);
+}
+input{
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+}
+select{
+    color: rgb(100,100,100);
+}
+#absenden{
+    background-color: rgba(10,10,10,0);
+    border: none;
+}
+.glyphicon-ok-sign:hover{
+    color: rgb(33, 186, 39);
+}
+    
+/*******************************/
+/*******Bearbeiten Buttons******/
+/*******************************/
+    
+.table_edit{
+    color: white;
+    text-align: center;
+    margin-right: 20%;
+}
+.table_edit:hover{
+    color: rgb(213, 167, 11) !important;
+}
+.table_trash{
+    color: white;
+    text-align: center;
+}
+.table_trash:hover{
+    color: rgb(213, 11, 11) !important;
+}
+
+
+
+
+/*MEDIA QUERY TABLET*/
+@media screen and (max-width: 767px){
+    .table-responsive{
+     border: none;   
+    }
+    .Plaetze{
+        display: none;
+    }
+}
+
+
+
+
+/*MEDIA QUERY PHONE*/
+@media screen and (max-width: 500px){
+    .Plaetze{
+        display: block;
+    }
+    table{
+        margin-bottom: 4% !important;
+    }
+    .page_table tbody tr td{
+        padding: 0;
+    }   
+    .table-responsive{
+     border: none;   
+    }
+    
+    /* Jede Spalte, Reihe, etc. ist jetzt untereinander */
+	table, thead, tbody, th, td, tr { 
+		display: block;
+	}
+    /*Überschriften werden verstekct, aber nicht ausgeblendet*/
+    thead tr { 
+        display: none;
+		/*position: absolute;
+		top: -9999px;
+		left: -9999px;*/
+	}
+	
+	td { 
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 1px solid #fff; 
+		position: relative;
+        padding-left: 45% !important;
+        font-weight: 300;
+        
+	}
+	
+	.page_table td:before { 
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+        padding-left: 2%;
+        left: 1px;
+        padding-right: 15px;
+		white-space: nowrap;
+        font-weight: 600;
+	}
+    /*
+	Alte Zeilenüberschriften einfügen
+	*/
+	.page_table td:nth-of-type(1):before { content: "Etappe"; }
+	.page_table td:nth-of-type(2):before { content: "Region"; }
+	.page_table td:nth-of-type(3):before { content: "Datum"; }
+	.page_table td:nth-of-type(4):before { content: "Kommentar"; }
+	.page_table td:nth-of-type(5):before { content: ""; }
+
+    
+    h2{
+        font-size: 1.4em;
+        margin-bottom: 4%;
+    }
+    h1{
+    font-size: 3em;
+    }
+    
+    .Bedienung{
+        float:none;
+    }
+    .Bedienung a{
+        width: 98%;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: rgb(213, 167, 11);
+        border: none;
+        border-radius: 2px;
+        color: white;
+        padding: 5px 10px;
+        text-align: center;
+        text-decoration: none;
+        display: block;
+        cursor: pointer;
+    }
+}
+
