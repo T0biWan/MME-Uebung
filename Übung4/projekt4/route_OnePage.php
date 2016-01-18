@@ -188,10 +188,12 @@
 					</table>
 				<a href="route_OnePage.php?&action=add">Hinzufügen</a>
 		<?php	
-				if($mysqli->connect_error)	echo "<p class='sql_error'>Es gabe einen Fehler bei der Datenbank-Operation</p>";
-				else 						echo "<p class='sql_success'>Die Datenbank-Operation war erfolgreich</p>";
+                if($mysqli->connect_error) echo "<script>alert('fehlertext')</scrpit>";
+                else ($mysqli->connect_error) echo "<script>alert('fehlertext')</scrpit>";
 				}
 		?>
+        
+        
 	</body>
 </html>
 
