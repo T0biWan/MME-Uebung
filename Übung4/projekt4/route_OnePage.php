@@ -19,10 +19,18 @@
 <!--fold-->
 	<head>
 		<title>Tolle Tabelle</title>
-		<meta charset="utf-8">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Die 3 Meta-Tags oben *müssen* zuerst im head stehen; jeglicher sonstiger head-Inhalt muss *nach* diesen Tags kommen -->
+        <title>Traumhafte Tabelle</title>
+
+        <!-- Bootstrap -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/styles.css" rel="stylesheet">
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,600' rel='stylesheet' type='text/css'>
 		<meta id="#" content="#">
-		<link rel="stylesheet" href="css/merge.css">
-		<script src=""></script>
+        <!-- JavaScript wird am Ende der Seite eingebunden, aus Performancegrüdnen -->
 	</head>
 
 
@@ -167,26 +175,76 @@
 				}
 			} else {
 		?>
-				<table border='1'>
-						<tr><th>Etappe:</th><th>Region:</th><th>Datum:</th><th>Kommentar:</th><th></th><th></th></tr>
-						<?php
-							require_once "db_daten.php"; 																						// Verbindungsdaten zur Datenbank
-							$sql_abfrage = $mysqli->query("Select id, etappe, region, datum, kommentar FROM route;"); 							// SQL-Abfrage
-									while($datensatz = $sql_abfrage->fetch_array()) {
-										echo	"<tr>"
-												. "<td>" . htmlspecialchars($datensatz['etappe'])		. "</td>"
-												. "<td>" . htmlspecialchars($datensatz['region'])		. "</td>"
-												. "<td>" . htmlspecialchars($datensatz['datum'])		. "</td>"
-												. "<td>" . htmlspecialchars($datensatz['kommentar'])	. "</td>"
-												. "<td>" . "<a href='route_OnePage.php?id="	. (int)htmlspecialchars($datensatz['id']) . "&action=edit" . "'>Bearbeiten</a>"	. "</td>"
-												. "<td>" . "<a href='tmp_submit.php?id="	. (int)htmlspecialchars($datensatz['id']) . "&action=delete" . "'>Löschen</a>"	. "</td>"
-												. "</tr>\n";
-									}
-									$sql_abfrage->close();
-									$mysqli->close();
-						?>
-					</table>
-				<a href="route_OnePage.php?&action=add">Hinzufügen</a>
+                <div class="table-responsive">
+                    <table class="table page_table">
+                            <tr><th>Etappe:</th><th>Region:</th><th>Datum:</th><th>Kommentar:</th><th></th><th></th></tr>
+                            <?php
+                                require_once "db_daten.php"; 																						// Verbindungsdaten zur Datenbank
+                                $sql_abfrage = $mysqli->query("Select id, etappe, region, datum, kommentar FROM route;"); 							// SQL-Abfrage
+                                        while($datensatz = $sql_abfrage->fetch_array()) {
+                                            echo	"<tr>"
+                                                    . "<td>" . htmlspecialchars($datensatz['etappe'])		. "</td>"
+                                                    . "<td>" . htmlspecialchars($datensatz['region'])		. "</td>"
+                                                    . "<td>" . htmlspecialchars($datensatz['datum'])		. "</td>"
+                                                    . "<td>" . htmlspecialchars($datensatz['kommentar'])	. "</td>"
+                                                    . "<td>" . "<a href='route_OnePage.php?id="	. (int)htmlspecialchars($datensatz['id']) . "&action=edit" . "'>Bearbeiten</a>"	. "</td>"
+                                                    . "<td>" . "<a href='tmp_submit.php?id="	. (int)htmlspecialchars($datensatz['id']) . "&action=delete" . "'>Löschen</a>"	. "</td>"
+                                                    . "</tr>\n";
+                                        }
+                                        $sql_abfrage->close();
+                                        $mysqli->close();
+                            ?>
+                        </table>
+                    <div class="Bedienung">
+<!--                    <a href="route_OnePage.php?&action=add">Hinzufügen</a>-->
+                        <a data-toggle="modal" data-target="#addModal">Hinzufügen</a>
+                    </div>
+                </div>
+                <!-- Modal -->
+    <div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="meinModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Schließen"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="meinModalLabel">Neuen Eintrag hinzufügen</h4>
+                    </div>
+                    
+                    
+                <!--Modal Inhalt-->
+                    <div class="modal-body">
+                        <div class="table-responsive">
+                            <form>
+                                <table class="form_table">
+                                    <tr>
+                                        <td data-toggle="tooltip" title="Etappe eintragen"><input name="etappe" type='text' placeholder="Etappe"></td>
+                                        <td>
+                                            <select name="region">
+                                                <option value='' disabled selected hidden>Region</option>
+                                                <optgroup label='Nordinsel'>
+                                                    <option value='$element'>$element</option>
+                                                </optgroup>
+                                                <optgroup label='Südinsel'>
+                                            <option value='$element'>$element</option>
+                                                </optgroup>
+                                            </select>
+                                        </td>
+                                        <td  data-toggle="tooltip" title="Datum eintragen"><input name="datum" type='text' placeholder="Datum"></td>
+                                        <td data-toggle="tooltip" title="Kommentar eintragen"><input name="kommentar" type='text' placeholder="Kommentar"></td>
+                                        <td><input name="action" type='hidden' value="add"></td>
+                                        <td><button class="Bedienung" type='submit' value='Okay'>Einträge hinzufügen</button></td>
+                                    </tr>
+                                </table>
+                            </form>
+                            
+                            
+                        </div>
+                    </div>
+                    <div class="modal-footer modalBedienung">
+                        <a type="button" data-dismiss="modal">Schließen</a>
+                    </div>
+                </div>
+            </div>
+    </div>
 		<?php	
 				if($mysqli->connect_error)	echo "<p class='sql_error'>Es gabe einen Fehler bei der Datenbank-Operation</p>";
 				else 						echo "<p class='sql_success'>Die Datenbank-Operation war erfolgreich</p>";
